@@ -2,3 +2,45 @@ body{
     background-image: url("img/1.jpg");
     background-size: cover;
 }
+.head_menu{
+    background: #f0b7a1; /* Old browsers */
+    background: -moz-linear-gradient(top, #f0b7a1 0%, #8c3310 50%, #752201 51%, #bf6e4e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f0b7a1 0%,#8c3310 50%,#752201 51%,#bf6e4e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f0b7a1 0%,#8c3310 50%,#752201 51%,#bf6e4e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#bf6e4e',GradientType=0 ); /* IE6-9 */
+
+    margin-top: 25px; /*сделаем отступ сверху в 25пх*/
+    width: 100%; /*ширина 100%*/
+
+    border-radius: 10px;
+}
+ul.head_ul{
+    display: flex; /*выстраиваем списки горизонтально*/
+    justify-content: center;
+}
+li.head_li{
+    list-style: none; /*убираем маркеры у списков li*/
+    padding: 10px; /*делаем отступы*/
+    border-right: 1px solid #b2b3b5; /*делаем прямые линин между кнопками*/
+}
+li.head_li a{
+    text-decoration: none; /*убираем подчеркивание*/
+    font-size: 18px;
+    color: #ffffff;
+    padding: 7px 30px 7px 40px;
+}
+li.head_li a i{
+    margin-right: 10px; /*сдвигаем иконку правее*/
+}
+.head_menu > ul li:first-child{
+    border-left: 1px solid #b2b3b5; /*Делаем прямые линии слева от кнопки дом*/
+}
+.head_menu > ul li:last-child{
+    border-right: 1px solid #b2b3b5; /*Делаем прямые линии справа от кнопки help*/
+}
+.head_menu li a:hover{
+    background: #b32d00;
+    color: black;
+    box-shadow: 10px 5px 10px -5px black;
+    border-radius: 10px;
+}
