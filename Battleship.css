@@ -1,6 +1,7 @@
 body{
     background-image: url("img/1.jpg");
     background-size: cover;
+    font-family: Verdana;
 }
 .head_menu{
     background: #f0b7a1; /* Old browsers */
