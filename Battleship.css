@@ -3,6 +3,8 @@ body{
     background-size: cover;
     font-family: Verdana;
 }
+
+/*-----------------------------------MENU--------------------------------------------------*/
 .head_menu{
     background: #f0b7a1; /* Old browsers */
     background: -moz-linear-gradient(top, #f0b7a1 0%, #8c3310 50%, #752201 51%, #bf6e4e 100%); /* FF3.6-15 */
@@ -44,4 +46,80 @@ li.head_li a i{
     color: black;
     box-shadow: 10px 5px 10px -5px black;
     border-radius: 10px;
+}
+
+/*---------------------------------SHIP MENU--------------------------------------*/
+.ship_menu{
+    width: 1200px;
+    height: 60px;
+    margin: 0 0 20px 60px;
+    background:  rgba(179, 60, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 6px 3px #454547;
+}
+
+/*-----------------------------BATTLE AREA---------------------------------------*/
+.area{
+    white-space:nowrap;
+}
+.area_one{
+    width: 550px;
+    height: 450px;
+    margin: 0 0 0 60px;
+    background: rgba(179, 60, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 6px 3px #454547;
+    display:inline-block
+
+}
+.area_two{
+    width: 550px;
+    height: 450px;
+    margin: 0 0 0 90px;
+    background: rgba(179, 60, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 6px 3px #454547;
+    display:inline-block;
+}
+#table_one{
+    border: 1px;
+    height: 400px;
+    width: 400px;
+    margin: 0 0 0 40px;
+
+}
+#table_two{
+    border: 1px;
+    height: 400px;
+    width: 400px;
+    margin: 0 0 0 40px;
+}
+#table_one > tbody > tr > td {
+     width: 600px;
+     height: 0;
+     background: rgba(91, 91, 215, 0.8);
+ }
+#table_one > thead > tr > td > p,
+#table_one > tbody > tr > td > p {
+    font-size: 11px;
+    color: white;
+    text-align: center;
+}
+#table_one > tbody > tr > td:nth-child(1) {
+    background: none;
+}
+
+#table_two > tbody > tr > td {
+    width: 600px;
+    height: 0;
+    background: rgba(91, 91, 215, 0.8);
+}
+#table_two > thead > tr > td > p,
+#table_two > tbody > tr > td > p {
+    font-size: 11px;
+    color: white;
+    text-align: center;
+}
+#table_two > tbody > tr > td:nth-child(1) {
+    background: none;
 }
