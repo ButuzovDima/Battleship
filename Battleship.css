@@ -42,8 +42,9 @@ li.head_li a i{
     border-right: 1px solid #b2b3b5; /*Делаем прямые линии справа от кнопки help*/
 }
 .head_menu li a:hover{
-    background: #b32d00;
-    color: black;
+    /*background: #b32d00;*/
+    background: white;
+    color: #B33C00;
     box-shadow: 10px 5px 10px -5px black;
     border-radius: 10px;
 }

@@ -1,7 +1,9 @@
 let td_you = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
 let td_pc = document.querySelectorAll('#table_two > tbody > tr > td:not(:nth-child(1))');
-let ship_p = 1;
+let ship_p = 2;
 let ship_1 = 0;
+let ship_2 = 0;
+let ship_two = true;
 /*------------------------table_one---------------------------------*/
 
 /*-------заполняем таблицу_1 нулями --------*/
@@ -132,11 +134,60 @@ for(let i = 0; i < td_you.length; i++){
                         }
 
                     }
-
                 }
             }
             else{
                 alert('ship = 4!')
+            }
+        } else if(ship_p === 2){
+            if(ship_2 < 6){
+                if(td_you[i].style.background === 'rgba(192, 192, 192, 0.8)'){
+                    alert('Error');
+                    console.log(td_you[i].style.background);
+                }
+                else{
+                    if(i === 0 && ship_two){
+                        ship_two = false;
+                        td_you[i].style.background = 'brown';
+                        td_you[i+11].style.background = 'rgba(192, 192, 192, 0.8)';
+                        td_you[i].value = 2;
+                        console.log(i);
+                        console.log(td_you[i].value);
+
+                        ship_2++;
+                        let t = true;
+                        if(t){
+                            td_you[i + 1].onclick = function () {
+                                td_you[i + 1].style.background = 'brown';
+                                td_you[i + 2].style.background = 'rgba(192, 192, 192, 0.8)';
+                                td_you[i + 10].style.background = 'rgba(192, 192, 192, 0.8)';
+                                td_you[i + 12].style.background = 'rgba(192, 192, 192, 0.8)';
+                                td_you[i + 1].value = 2;
+                                ship_2++;
+                                t = false;
+                                ship_two = true;
+                            };
+                        }
+                        if(t){
+                            td_you[i + 10].onclick = function(){
+                                td_you[i+10].style.background = 'brown';
+                                td_you[i + 1].style.background = 'rgba(192, 192, 192, 0.8)';
+                                td_you[i + 11].style.background = 'rgba(192, 192, 192, 0.8)';
+                                td_you[i + 20].style.background = 'rgba(192, 192, 192, 0.8)';
+                                td_you[i + 21].style.background = 'rgba(192, 192, 192, 0.8)';
+                                td_you[i + 10].value = 2;
+                                ship_2++;
+                                t = false;
+                                ship_two = true;
+                            };
+                        }
+                    } else if(i === 9 && ship_two){
+                        td_you[i].style.background = 'brown';
+                    }
+                }
+            }
+            else{
+                alert('ship = 3');
             }
         }
     }
