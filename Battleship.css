@@ -57,8 +57,42 @@ li.head_li a i{
     background:  rgba(179, 60, 0, 0.5);
     border-radius: 10px;
     box-shadow: 0 0 6px 3px #454547;
+    justify-content: center;
+    display: flex;
 }
-
+.fa-ship{
+    margin: 10px 0 10px 50px;
+    color: #E6E6E6;
+}
+.fa-ship:hover{
+    box-shadow: 0 0 6px 3px #454547;
+    border-radius: 7px;
+    cursor: pointer;
+}
+#p1:after{
+    content: 'x1';
+    color: #E6E6E6;
+    font-family: Verdana;
+    padding-left: 5px; /*сдвигаем текст влево*/
+}
+#p2:after{
+    content: 'x2';
+    color: #E6E6E6;
+    font-family: Verdana;
+    padding-left: 5px; /*сдвигаем текст влево*/
+}
+#p3:after{
+    content: 'x3';
+    color: #E6E6E6;
+    font-family: Verdana;
+    padding-left: 5px; /*сдвигаем текст влево*/
+}
+#p4:after{
+    content: 'x4';
+    color: #E6E6E6;
+    font-family: Verdana;
+    padding-left: 5px; /*сдвигаем текст влево*/
+}
 /*-----------------------------BATTLE AREA---------------------------------------*/
 .area{
     white-space:nowrap;

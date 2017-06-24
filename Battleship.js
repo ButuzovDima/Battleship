@@ -1,10 +1,44 @@
 let td_you = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
 let td_pc = document.querySelectorAll('#table_two > tbody > tr > td:not(:nth-child(1))');
-let ship_p = 2;
+let ship_p;
 let ship_1 = 0;
 let ship_2 = 0;
+let ship_3 = 0;
 let ship_two = true;
 
+/*--------------------------ship_menu-------------------------------*/
+let fa_ship = document.getElementsByClassName('fa-ship');
+let style_ship = function(a){
+    for(let i = 0; i < fa_ship.length; i++){
+        fa_ship[i].style.boxShadow = null;
+    }
+    a.style.borderRadius = '7px';
+    a.style.boxShadow = '0 0 6px 3px #454547';
+};
+
+let p_1 = document.getElementById('p1');
+style_ship(p_1);
+ship_p = 1;
+
+p1.onclick = function(){
+    ship_p = 1;
+    style_ship(p_1);
+};
+p2.onclick = function(){
+    let p_2 = document.getElementById('p2');
+    ship_p = 2;
+    style_ship(p_2);
+};
+p3.onclick = function(){
+    let p_3 = document.getElementById('p3');
+    ship_p = 3;
+    style_ship(p_3);
+};
+p4.onclick = function(){
+    let p_4 = document.getElementById('p4');
+    ship_p = 4;
+    style_ship(p_4);
+};
 /*------------------------table_one---------------------------------*/
 
 /*-------заполняем таблицу_1 нулями --------*/
@@ -2082,6 +2116,13 @@ for(let i = 0; i < td_you.length; i++){
             }
             else{
                 alert('ship = 3');
+            }
+        } else if(ship_p === 3){
+            if(ship_3 < 6){
+
+            }
+            else{
+                alert('ship_3 = 2');
             }
         }
     };
