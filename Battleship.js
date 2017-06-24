@@ -11,7 +11,12 @@ let fa_ship = document.getElementsByClassName('fa-ship');
 let style_ship = function(a){
     for(let i = 0; i < fa_ship.length; i++){
         console.log(fa_ship[i].style.boxShadow);
+        //work from IE!!!
         if(fa_ship[i].style.boxShadow === '0px 0px 6px 3px #454547'){
+            fa_ship[i].style.boxShadow = null;
+        }
+        // work from chrome!!!
+        if(fa_ship[i].style.boxShadow = 'rgb(69, 69, 71) 0px 0px 6px 3px'){
             fa_ship[i].style.boxShadow = null;
         }
     }
