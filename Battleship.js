@@ -10,7 +10,10 @@ let ship_two = true;
 let fa_ship = document.getElementsByClassName('fa-ship');
 let style_ship = function(a){
     for(let i = 0; i < fa_ship.length; i++){
-        fa_ship[i].style.boxShadow = null;
+        console.log(fa_ship[i].style.boxShadow);
+        if(fa_ship[i].style.boxShadow === '0px 0px 6px 3px #454547'){
+            fa_ship[i].style.boxShadow = null;
+        }
     }
     a.style.borderRadius = '7px';
     a.style.boxShadow = '0 0 6px 3px #454547';
