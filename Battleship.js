@@ -4,7 +4,9 @@ let ship_p;
 let ship_1 = 0;
 let ship_2 = 0;
 let ship_3 = 0;
+let ship_4 = 0;
 let ship_two = true;
+let ship_three = true;
 
 /*--------------------------ship_menu-------------------------------*/
 let fa_ship = document.getElementsByClassName('fa-ship');
@@ -48,6 +50,11 @@ p4.onclick = function(){
     style_ship(p_4);
 };
 /*------------------------table_one---------------------------------*/
+
+/*-------------------------color_ship-------------------------------*/
+function color_ship(a){
+    td_you[a].style.background = 'brown';
+}
 
 /*-------заполняем таблицу_1 нулями --------*/
 for(let i = 0; i < td_you.length; i++){
@@ -2127,7 +2134,64 @@ for(let i = 0; i < td_you.length; i++){
             }
         } else if(ship_p === 3){
             if(ship_3 < 6){
+                if(td_you[i].style.background === 'rgba(192, 192, 192, 0.8)'){
+                    alert('Error');
+                    console.log(td_you[i].style.background);
+                }
+                else{
+                    if(ship_three){
+                        ship_three = false;
+                        color_ship(i);
+                        if( i - 11 > 0 && ((i-11)-9)%10!==0){
+                            td_you[i-11].style.background = 'rgba(192, 192, 192, 0.8)';
+                        }
+                        if( i - 9 > 0 && (i-9)%10 !== 0){
+                            td_you[i-9].style.background = 'rgba(192, 192, 192, 0.8)';
+                        }
+                        if( i + 9 < 100 && i % 10 !== 0){
+                            td_you[i+9].style.background = 'rgba(192, 192, 192, 0.8)';
+                        }
+                        if( i + 11 < 100 && (i + 11) % 10 !== 0){
+                            td_you[i+11].style.background = 'rgba(192, 192, 192, 0.8)';
+                        }
 
+                        td_you[i].value = 3;
+                        ship_3++;
+
+                        console.log(i);
+                        console.log(td_you[i].value);
+
+                        if(i - 10 >= 0){
+                            td_you[i-10].onclick = function(){
+                                if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    alert('Error');
+                                }
+                                else {
+                                    color_ship(i-10);
+
+                                    if(i + 1 < 100 && (i + 1) % 10 !== 0){
+                                        td_you[i+1].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i - 1 >= 0 && ((i-1)-9) % 10 !== 0){
+                                        td_you[i-1].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i - 21 >= 0 && i % 10 !== 0){
+                                        td_you[i-21].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i - 19 >= 0 && (i - 19) % 10 !== 0){
+                                        td_you[i-19].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+
+                                    td_you[i-10].value = 3;
+                                    ship_3++;
+
+                                    console.log(i-10);
+                                    console.log(td_you[i-10].value);
+                                }
+                            };
+                        }
+                    }
+                }
             }
             else{
                 alert('ship_3 = 2');
