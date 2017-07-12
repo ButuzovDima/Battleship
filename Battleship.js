@@ -7,6 +7,10 @@ let ship_3 = 0;
 let ship_4 = 0;
 let ship_two = true;
 let ship_three = true;
+let ship_four = true;
+
+let ship_two_2 = true;
+
 
 /*--------------------------ship_menu-------------------------------*/
 let fa_ship = document.getElementsByClassName('fa-ship');
@@ -26,23 +30,31 @@ let style_ship = function(a){
     a.style.boxShadow = '0 0 6px 3px #454547';
 };
 
-let p_1 = document.getElementById('p1');
-style_ship(p_1);
-ship_p = 1;
+let p_3 = document.getElementById('p3');
+style_ship(p_3);
+ship_p = 3;
 
 p1.onclick = function(){
-    ship_p = 1;
-    style_ship(p_1);
+    if(ship_two && ship_three){
+        let p_1 = document.getElementById('p1');
+        ship_p = 1;
+        style_ship(p_1);
+    }
 };
 p2.onclick = function(){
-    let p_2 = document.getElementById('p2');
-    ship_p = 2;
-    style_ship(p_2);
+    if(ship_three){
+        let p_2 = document.getElementById('p2');
+        ship_p = 2;
+        style_ship(p_2);
+    }
 };
 p3.onclick = function(){
-    let p_3 = document.getElementById('p3');
-    ship_p = 3;
-    style_ship(p_3);
+    if(ship_two){
+        let p_3 = document.getElementById('p3');
+        ship_p = 3;
+        style_ship(p_3);
+    }
+
 };
 p4.onclick = function(){
     let p_4 = document.getElementById('p4');
@@ -66,7 +78,7 @@ for(let i = 0; i < td_you.length; i++){
     td_you[i].onclick = function(){
         if(ship_p === 1){
             if(ship_1 < 4){
-                if(td_you[i].style.background === 'rgba(192, 192, 192, 0.8)'){
+                if(td_you[i].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i].value === 1){
                     alert('Error');
                     console.log(td_you[i].style.background);
                 }
@@ -192,7 +204,7 @@ for(let i = 0; i < td_you.length; i++){
             }
         } else if(ship_p === 2){
             if(ship_2 < 6){
-                if(td_you[i].style.background === 'rgba(192, 192, 192, 0.8)'){
+                if(td_you[i].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i].value === 2){
                     alert('Error');
                     console.log(td_you[i].style.background);
                 }
@@ -208,7 +220,7 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(td_you[i].value);
 
                         td_you[i + 1].onclick = function () {
-                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -223,7 +235,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 10].onclick = function(){
-                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -250,7 +262,7 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(td_you[i].value);
 
                         td_you[i - 1].onclick = function () {
-                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -265,7 +277,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 10].onclick = function(){
-                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -290,7 +302,7 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(td_you[i].value);
 
                         td_you[i - 1].onclick = function () {
-                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -305,7 +317,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i - 10].onclick = function(){
-                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -330,7 +342,7 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(td_you[i].value);
 
                         td_you[i + 1].onclick = function () {
-                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -346,7 +358,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i - 10].onclick = function(){
-                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -372,7 +384,7 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(td_you[i].value);
 
                         td_you[i + 1].onclick = function () {
-                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -392,7 +404,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i - 1].onclick = function(){
-                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -410,7 +422,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 10].onclick = function(){
-                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -442,7 +454,7 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(td_you[i].value);
 
                         td_you[i + 1].onclick = function () {
-                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -463,7 +475,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i - 10].onclick = function(){
-                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -483,7 +495,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 10].onclick = function(){
-                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -513,7 +525,7 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(td_you[i].value);
 
                         td_you[i + 1].onclick = function () {
-                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -531,7 +543,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 10].onclick = function(){
-                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -552,7 +564,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i - 1].onclick = function(){
-                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -582,7 +594,7 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(td_you[i].value);
 
                         td_you[i - 10].onclick = function () {
-                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -600,7 +612,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 10].onclick = function(){
-                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -621,7 +633,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i - 1].onclick = function(){
-                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -652,7 +664,7 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(td_you[i].value);
 
                         td_you[i - 10].onclick = function () {
-                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -672,7 +684,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 10].onclick = function(){
-                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -690,7 +702,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i - 1].onclick = function(){
-                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -721,7 +733,7 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(td_you[i].value);
 
                         td_you[i - 10].onclick = function () {
-                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -742,7 +754,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 1].onclick = function(){
-                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -760,7 +772,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i - 1].onclick = function(){
-                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -790,7 +802,7 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(td_you[i].value);
 
                         td_you[i - 10].onclick = function () {
-                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -811,7 +823,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 1].onclick = function(){
-                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -831,7 +843,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i - 1].onclick = function(){
-                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -859,7 +871,7 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(td_you[i].value);
 
                         td_you[i - 10].onclick = function () {
-                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -879,7 +891,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 10].onclick = function(){
-                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -897,7 +909,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 1].onclick = function(){
-                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -930,7 +942,7 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(td_you[i].value);
 
                         td_you[i - 10].onclick = function () {
-                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -949,7 +961,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i - 1].onclick = function () {
-                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -968,7 +980,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 1].onclick = function () {
-                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -990,7 +1002,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 10].onclick = function () {
-                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -1025,7 +1037,7 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(td_you[i].value);
 
                         td_you[i - 10].onclick = function () {
-                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -1044,7 +1056,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i - 1].onclick = function () {
-                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -1066,7 +1078,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 1].onclick = function () {
-                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -1085,7 +1097,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 10].onclick = function () {
-                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -1119,7 +1131,7 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(td_you[i].value);
 
                         td_you[i - 10].onclick = function () {
-                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -1141,7 +1153,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i - 1].onclick = function () {
-                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -1160,7 +1172,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 1].onclick = function () {
-                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -1182,7 +1194,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 10].onclick = function () {
-                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -1213,7 +1225,7 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(td_you[i].value);
 
                         td_you[i - 10].onclick = function () {
-                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -1235,7 +1247,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i - 1].onclick = function () {
-                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -1257,7 +1269,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 1].onclick = function () {
-                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -1276,7 +1288,7 @@ for(let i = 0; i < td_you.length; i++){
                         };
 
                         td_you[i + 10].onclick = function () {
-                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                 alert('Error');
                             }
                             else {
@@ -1308,7 +1320,7 @@ for(let i = 0; i < td_you.length; i++){
                                 console.log(td_you[i].value);
 
                                 td_you[i + 1].onclick = function () {
-                                    if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1329,7 +1341,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i - 1].onclick = function(){
-                                    if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1350,7 +1362,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i + 10].onclick = function(){
-                                    if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1385,7 +1397,7 @@ for(let i = 0; i < td_you.length; i++){
                                 console.log(td_you[i].value);
 
                                 td_you[i - 1].onclick = function () {
-                                    if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1407,7 +1419,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i - 10].onclick = function(){
-                                    if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1428,7 +1440,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i + 10].onclick = function(){
-                                    if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1463,7 +1475,7 @@ for(let i = 0; i < td_you.length; i++){
                                 console.log(td_you[i].value);
 
                                 td_you[i - 1].onclick = function () {
-                                    if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1485,7 +1497,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i - 10].onclick = function(){
-                                    if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1507,7 +1519,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i + 1].onclick = function(){
-                                    if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1541,7 +1553,7 @@ for(let i = 0; i < td_you.length; i++){
                                 console.log(td_you[i].value);
 
                                 td_you[i - 10].onclick = function () {
-                                    if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1562,7 +1574,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i + 10].onclick = function(){
-                                    if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1583,7 +1595,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i + 1].onclick = function(){
-                                    if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1620,7 +1632,7 @@ for(let i = 0; i < td_you.length; i++){
                                 console.log(td_you[i].value);
 
                                 td_you[i - 10].onclick = function () {
-                                    if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1640,7 +1652,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i - 1].onclick = function () {
-                                    if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1663,7 +1675,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i + 1].onclick = function () {
-                                    if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1686,7 +1698,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i + 10].onclick = function () {
-                                    if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1724,7 +1736,7 @@ for(let i = 0; i < td_you.length; i++){
                                 console.log(td_you[i].value);
 
                                 td_you[i - 10].onclick = function () {
-                                    if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1747,7 +1759,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i - 1].onclick = function () {
-                                    if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1770,7 +1782,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i + 1].onclick = function () {
-                                    if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1790,7 +1802,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i + 10].onclick = function () {
-                                    if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1828,7 +1840,7 @@ for(let i = 0; i < td_you.length; i++){
                                 console.log(td_you[i].value);
 
                                 td_you[i - 10].onclick = function () {
-                                    if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1851,7 +1863,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i - 1].onclick = function () {
-                                    if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1874,7 +1886,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i + 1].onclick = function () {
-                                    if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1897,7 +1909,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i + 10].onclick = function () {
-                                    if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1932,7 +1944,7 @@ for(let i = 0; i < td_you.length; i++){
                                 console.log(td_you[i].value);
 
                                 td_you[i - 10].onclick = function () {
-                                    if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1955,7 +1967,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i - 1].onclick = function () {
-                                    if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1975,7 +1987,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i + 1].onclick = function () {
-                                    if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -1998,7 +2010,7 @@ for(let i = 0; i < td_you.length; i++){
                                 };
 
                                 td_you[i + 10].onclick = function () {
-                                    if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                         alert('Error');
                                     }
                                     else {
@@ -2035,7 +2047,7 @@ for(let i = 0; i < td_you.length; i++){
                             console.log(td_you[i].value);
 
                             td_you[i - 10].onclick = function () {
-                                if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 10].value === 2){
                                     alert('Error');
                                 }
                                 else {
@@ -2058,7 +2070,7 @@ for(let i = 0; i < td_you.length; i++){
                             };
 
                             td_you[i - 1].onclick = function () {
-                                if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                if(td_you[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i - 1].value === 2){
                                     alert('Error');
                                 }
                                 else {
@@ -2081,7 +2093,7 @@ for(let i = 0; i < td_you.length; i++){
                             };
 
                             td_you[i + 1].onclick = function () {
-                                if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                if(td_you[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 1].value === 2){
                                     alert('Error');
                                 }
                                 else {
@@ -2104,7 +2116,7 @@ for(let i = 0; i < td_you.length; i++){
                             };
 
                             td_you[i + 10].onclick = function () {
-                                if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i + 10].value === 2){
                                     alert('Error');
                                 }
                                 else {
@@ -2140,12 +2152,13 @@ for(let i = 0; i < td_you.length; i++){
                 }
                 else{
                     if(ship_three){
+
                         ship_three = false;
                         color_ship(i);
-                        if( i - 11 > 0 && ((i-11)-9)%10!==0){
+                        if( i - 11 >= 0 && ((i-11)-9)%10!==0){
                             td_you[i-11].style.background = 'rgba(192, 192, 192, 0.8)';
                         }
-                        if( i - 9 > 0 && (i-9)%10 !== 0){
+                        if( i - 9 >= 0 && (i-9)%10 !== 0){
                             td_you[i-9].style.background = 'rgba(192, 192, 192, 0.8)';
                         }
                         if( i + 9 < 100 && i % 10 !== 0){
@@ -2161,13 +2174,17 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(i);
                         console.log(td_you[i].value);
 
-                        if(i - 10 >= 0){
-                            td_you[i-10].onclick = function(){
+
+                        if(i - 10 >= 0 ){
+                            let td_you_i_2 = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                            td_you_i_2[i-10].onclick = function(){
                                 if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
                                     alert('Error');
                                 }
-                                else {
+                                else if(ship_two_2){
+
                                     color_ship(i-10);
+                                    console.log(ship_two_2);
 
                                     if(i + 1 < 100 && (i + 1) % 10 !== 0){
                                         td_you[i+1].style.background = 'rgba(192, 192, 192, 0.8)';
@@ -2187,7 +2204,136 @@ for(let i = 0; i < td_you.length; i++){
 
                                     console.log(i-10);
                                     console.log(td_you[i-10].value);
+
+                                    if(i - 20 >= 0  ){
+                                        td_you_i_2[i-20].onclick = function(){
+                                            if(td_you[i - 20].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                                alert('Error');
+                                            }
+                                            else{
+                                                color_ship(i-20);
+
+                                                if(i - 30 >= 0){
+                                                    td_you[i - 30].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i - 31 >= 0 && i % 10 !== 0 ){
+                                                    td_you[i - 31].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i - 29 >= 0 && (i - 29) % 10 !== 0){
+                                                    td_you[i - 29].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 10 < 100){
+                                                    td_you[i + 10].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+
+                                                td_you[i-20].value = 3;
+                                                ship_3++;
+
+                                                console.log(i-20);
+                                                console.log(td_you[i-20].value);
+
+                                                ship_three = true;
+                                            }
+
+                                        };
+                                    }
+
+                                    if(i + 10 < 100 ){
+                                        td_you_i_2[i+10].onclick = function (){
+                                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                                alert('Error');
+                                            }
+                                            else{
+                                                color_ship(i+10);
+
+                                                if(i - 20 >= 0){
+                                                    td_you[i - 20].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if( i + 19 < 100 && i % 10 !== 0){
+                                                    td_you[i+19].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if( i + 21 < 100 && (i + 21) % 10 !== 0){
+                                                    td_you[i+21].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 20 < 100){
+                                                    td_you[i + 20].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+
+                                                td_you[i+10].value = 3;
+                                                ship_3++;
+
+                                                console.log(i+10);
+                                                console.log(td_you[i+10].value);
+
+                                                ship_three = true;
+                                            }
+                                        };
+                                    }
                                 }
+                            };
+                        }
+                        if(i + 10 < 100 ){
+                            let td_you_i = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                            td_you_i[i+10].onclick = function(){
+                                if(td_you_i[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                    alert('Error');
+                                }
+                                else{
+                                    ship_two_2 = false;
+                                    color_ship(i+10);
+
+                                    if(i + 1 < 100 && (i + 1) % 10 !== 0){
+                                        td_you_i[i+1].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i - 1 >= 0 && ((i-1)-9) % 10 !== 0){
+                                        td_you_i[i-1].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if( i + 19 < 100 && i % 10 !== 0){
+                                        td_you_i[i+19].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if( i + 21 < 100 && (i + 21) % 10 !== 0){
+                                        td_you_i[i+21].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+
+                                    td_you[i+10].value = 3;
+                                    ship_3++;
+
+                                    console.log(i+10);
+                                    console.log(td_you[i+10].value);
+
+                                    if(i - 10 >= 0 ){
+                                        td_you_i.onclick = function(){
+                                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                                alert('Error');
+                                            }
+                                            else{
+                                                color_ship(i-10);
+
+                                                if(i - 20 >= 0){
+                                                    td_you_i[i - 20].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i - 21 >= 0 && i % 10 !== 0 ){
+                                                    td_you_i[i - 21].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i - 19 >= 0 && (i - 29) % 10 !== 0){
+                                                    td_you_i[i - 19].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 20 < 100){
+                                                    td_you_i[i+20].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+
+                                                td_you[i-10].value = 3;
+                                                ship_3++;
+
+                                                console.log(i-10);
+                                                console.log(td_you[i-10].value);
+
+                                                ship_three = true;
+                                            }
+                                        };
+                                    }
+                                }
+
                             };
                         }
                     }
