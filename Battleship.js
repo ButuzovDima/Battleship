@@ -9,8 +9,6 @@ let ship_two = true;
 let ship_three = true;
 let ship_four = true;
 
-let ship_two_2 = true;
-
 
 /*--------------------------ship_menu-------------------------------*/
 let fa_ship = document.getElementsByClassName('fa-ship');
@@ -22,7 +20,7 @@ let style_ship = function(a){
             fa_ship[i].style.boxShadow = null;
         }
         // work from chrome!!!
-        if(fa_ship[i].style.boxShadow = 'rgb(69, 69, 71) 0px 0px 6px 3px'){
+        if(fa_ship[i].style.boxShadow === 'rgb(69, 69, 71) 0px 0px 6px 3px'){
             fa_ship[i].style.boxShadow = null;
         }
     }
@@ -35,21 +33,21 @@ style_ship(p_3);
 ship_p = 3;
 
 p1.onclick = function(){
-    if(ship_two && ship_three){
+    if(ship_two && ship_three && ship_four){
         let p_1 = document.getElementById('p1');
         ship_p = 1;
         style_ship(p_1);
     }
 };
 p2.onclick = function(){
-    if(ship_three){
+    if(ship_three && ship_four){
         let p_2 = document.getElementById('p2');
         ship_p = 2;
         style_ship(p_2);
     }
 };
 p3.onclick = function(){
-    if(ship_two){
+    if(ship_two && ship_four){
         let p_3 = document.getElementById('p3');
         ship_p = 3;
         style_ship(p_3);
@@ -57,9 +55,11 @@ p3.onclick = function(){
 
 };
 p4.onclick = function(){
-    let p_4 = document.getElementById('p4');
-    ship_p = 4;
-    style_ship(p_4);
+    if(ship_two && ship_three){
+        let p_4 = document.getElementById('p4');
+        ship_p = 4;
+        style_ship(p_4);
+    }
 };
 /*------------------------table_one---------------------------------*/
 
@@ -2146,14 +2146,14 @@ for(let i = 0; i < td_you.length; i++){
             }
         } else if(ship_p === 3){
             if(ship_3 < 6){
-                if(td_you[i].style.background === 'rgba(192, 192, 192, 0.8)'){
+                if(td_you[i].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i].value === 3){
                     alert('Error');
                     console.log(td_you[i].style.background);
                 }
                 else{
                     if(ship_three){
-
                         ship_three = false;
+
                         color_ship(i);
                         if( i - 11 >= 0 && ((i-11)-9)%10!==0){
                             td_you[i-11].style.background = 'rgba(192, 192, 192, 0.8)';
@@ -2176,15 +2176,14 @@ for(let i = 0; i < td_you.length; i++){
 
 
                         if(i - 10 >= 0 ){
-                            let td_you_i_2 = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
-                            td_you_i_2[i-10].onclick = function(){
-                                if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            let td_you_i_a = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                            td_you_i_a[i-10].onclick = function(){
+                                if(td_you_i_a[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_i_a[i - 10].value === 3){
                                     alert('Error');
                                 }
-                                else if(ship_two_2){
+                                else{
 
                                     color_ship(i-10);
-                                    console.log(ship_two_2);
 
                                     if(i + 1 < 100 && (i + 1) % 10 !== 0){
                                         td_you[i+1].style.background = 'rgba(192, 192, 192, 0.8)';
@@ -2206,8 +2205,8 @@ for(let i = 0; i < td_you.length; i++){
                                     console.log(td_you[i-10].value);
 
                                     if(i - 20 >= 0  ){
-                                        td_you_i_2[i-20].onclick = function(){
-                                            if(td_you[i - 20].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                        td_you_i_a[i-20].onclick = function(){
+                                            if(td_you_i_a[i - 20].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_i_a[i - 20].value === 3){
                                                 alert('Error');
                                             }
                                             else{
@@ -2239,8 +2238,8 @@ for(let i = 0; i < td_you.length; i++){
                                     }
 
                                     if(i + 10 < 100 ){
-                                        td_you_i_2[i+10].onclick = function (){
-                                            if(td_you[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                        td_you_i_a[i+10].onclick = function (){
+                                            if(td_you_i_a[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_i_a[i+10].value === 3){
                                                 alert('Error');
                                             }
                                             else{
@@ -2273,26 +2272,25 @@ for(let i = 0; i < td_you.length; i++){
                             };
                         }
                         if(i + 10 < 100 ){
-                            let td_you_i = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
-                            td_you_i[i+10].onclick = function(){
-                                if(td_you_i[i + 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                            let td_you_i_b = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                            td_you_i_b[i+10].onclick = function(){
+                                if(td_you_i_b[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_i_b[i+10].value === 3 ){
                                     alert('Error');
                                 }
                                 else{
-                                    ship_two_2 = false;
                                     color_ship(i+10);
 
                                     if(i + 1 < 100 && (i + 1) % 10 !== 0){
-                                        td_you_i[i+1].style.background = 'rgba(192, 192, 192, 0.8)';
+                                        td_you_i_b[i+1].style.background = 'rgba(192, 192, 192, 0.8)';
                                     }
                                     if(i - 1 >= 0 && ((i-1)-9) % 10 !== 0){
-                                        td_you_i[i-1].style.background = 'rgba(192, 192, 192, 0.8)';
+                                        td_you_i_b[i-1].style.background = 'rgba(192, 192, 192, 0.8)';
                                     }
                                     if( i + 19 < 100 && i % 10 !== 0){
-                                        td_you_i[i+19].style.background = 'rgba(192, 192, 192, 0.8)';
+                                        td_you_i_b[i+19].style.background = 'rgba(192, 192, 192, 0.8)';
                                     }
                                     if( i + 21 < 100 && (i + 21) % 10 !== 0){
-                                        td_you_i[i+21].style.background = 'rgba(192, 192, 192, 0.8)';
+                                        td_you_i_b[i+21].style.background = 'rgba(192, 192, 192, 0.8)';
                                     }
 
                                     td_you[i+10].value = 3;
@@ -2302,24 +2300,24 @@ for(let i = 0; i < td_you.length; i++){
                                     console.log(td_you[i+10].value);
 
                                     if(i - 10 >= 0 ){
-                                        td_you_i.onclick = function(){
-                                            if(td_you[i - 10].style.background === 'rgba(192, 192, 192, 0.8)'){
+                                        td_you_i_b[i - 10].onclick = function(){
+                                            if(td_you_i_b[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_i_b[i-10].value === 3){
                                                 alert('Error');
                                             }
                                             else{
                                                 color_ship(i-10);
 
                                                 if(i - 20 >= 0){
-                                                    td_you_i[i - 20].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                    td_you_i_b[i - 20].style.background = 'rgba(192, 192, 192, 0.8)';
                                                 }
                                                 if(i - 21 >= 0 && i % 10 !== 0 ){
-                                                    td_you_i[i - 21].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                    td_you_i_b[i - 21].style.background = 'rgba(192, 192, 192, 0.8)';
                                                 }
                                                 if(i - 19 >= 0 && (i - 29) % 10 !== 0){
-                                                    td_you_i[i - 19].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                    td_you_i_b[i - 19].style.background = 'rgba(192, 192, 192, 0.8)';
                                                 }
                                                 if(i + 20 < 100){
-                                                    td_you_i[i+20].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                    td_you_i_b[i+20].style.background = 'rgba(192, 192, 192, 0.8)';
                                                 }
 
                                                 td_you[i-10].value = 3;
@@ -2332,8 +2330,231 @@ for(let i = 0; i < td_you.length; i++){
                                             }
                                         };
                                     }
+
+                                    if(i + 20 < 100 ){
+                                        td_you_i_b[i + 20].onclick = function(){
+                                            if(td_you_i_b[i + 20].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_i_b[i+20].value === 3){
+                                                alert('Error');
+                                            }
+                                            else{
+                                                color_ship(i+20);
+
+                                                if(i - 10 >= 0){
+                                                    td_you_i_b[i-10].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 30 < 100){
+                                                    td_you_i_b[i+30].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 29 < 100 && i % 10 !== 0){
+                                                    td_you_i_b[i+29].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 31 < 100 && (i + 31) % 10 !== 0){
+                                                    td_you_i_b[i+31].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+
+                                                td_you[i+20].value = 3;
+                                                ship_3++;
+
+                                                console.log(i+20);
+                                                console.log(td_you[i+20].value);
+
+                                                ship_three = true;
+                                            }
+                                        };
+                                    }
                                 }
 
+                            };
+                        }
+
+                        if(i - 1 >= 0){
+                            let td_you_i_c = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                            td_you_i_c[i-1].onclick = function(){
+                                if(td_you_i_c[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_i_c[i-1].value === 3 ){
+                                    alert('Error');
+                                }
+                                else{
+                                    color_ship(i-1);
+
+                                    if(i - 10 >= 0){
+                                        td_you_i_c[i-10].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i + 10 < 100){
+                                        td_you_i_c[i+10].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i - 12 >= 0 && (i - 1) % 10 !== 0){
+                                        td_you_i_c[i-12].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i + 8 < 100 && (i - 1) % 10 !== 0){
+                                        td_you_i_c[i+8].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+
+                                    td_you[i-1].value = 3;
+                                    ship_3++;
+
+                                    console.log(i-1);
+                                    console.log(td_you[i-1].value);
+
+                                    if(i - 2 >= 0){
+                                        td_you_i_c[i-2].onclick = function(){
+                                            if(td_you_i_c[i-2].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_i_c[i-2].value === 3){
+                                                alert('Error');
+                                            }
+                                            else{
+
+                                                color_ship(i-2);
+
+                                                if(i + 1 < 100 && (i - 9) % 10 !== 0){
+                                                    td_you_i_c[i+1].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i - 3 >=0 && (i-3 - 9) % 10 !== 0){
+                                                    td_you_i_c[i-3].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i - 13 >= 0 && (i-13-9) % 10 !== 0){
+                                                    td_you_i_c[i-13].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 7 < 100 && (i + 7 - 9) % 10 !== 0){
+                                                    td_you_i_c[i+7].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+
+                                                td_you[i-2].value = 3;
+                                                ship_3++;
+
+                                                console.log(i-2);
+                                                console.log(td_you[i-2].value);
+
+                                                ship_three = true;
+                                            }
+                                        };
+                                    }
+
+                                    if(i + 1 < 100){
+                                        td_you_i_c[i+1].onclick = function(){
+                                            if(td_you_i_c[i+1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_i_c[i+1].value === 3){
+                                                alert('Error');
+                                            }
+                                            else{
+                                                color_ship(i+1);
+
+                                                if(i - 2 >= 0 && (i-2-9) % 10 !== 0){
+                                                    td_you_i_c[i-2].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i - 8 >= 0 && (i - 8) % 10 !== 0){
+                                                    td_you_i_c[i-8].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 12 < 100 && (i + 12) % 10 !== 0){
+                                                    td_you_i_c[i+12].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 2 < 100 && (i + 2) % 10 !== 0){
+                                                    td_you_i_c[i+2].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+
+                                                td_you[i+1].value = 3;
+                                                ship_3++;
+
+                                                console.log(i+1);
+                                                console.log(td_you[i+1].value);
+
+                                                ship_three = true;
+                                            }
+                                        };
+                                    }
+                                }
+                            };
+                        }
+
+                        if(i + 1 < 100){
+                            let td_you_i_d = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                            td_you_i_d[i+1].onclick = function(){
+                                if(td_you_i_d[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_i_d[i+1].value === 3 ){
+                                    alert('Error');
+                                }
+                                else{
+                                    color_ship(i+1);
+
+                                    if(i - 10 >= 0){
+                                        td_you_i_d[i-10].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i + 10 < 100){
+                                        td_you_i_d[i+10].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i - 8 >= 0 && (i - 8) % 10 !== 0){
+                                        td_you_i_d[i-8].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i + 12 < 100 && (i + 12) % 10 !== 0){
+                                        td_you_i_d[i+12].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+
+                                    td_you[i+1].value = 3;
+                                    ship_3++;
+
+                                    console.log(i+1);
+                                    console.log(td_you[i+1].value);
+
+                                    if(i - 1 >= 0){
+                                        td_you_i_d[i-1].onclick = function(){
+                                            if(td_you_i_d[i-1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_i_d[i-1].value === 3){
+                                                alert('Error');
+                                            }
+                                            else{
+                                                color_ship(i-1);
+
+                                                if(i - 2 >= 0 && (i - 2 - 9) % 10 !== 0){
+                                                    td_you_i_d[i-2].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 2 < 100 && (i + 2) % 10 !== 0){
+                                                    td_you_i_d[i+2].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i - 12 >= 0 && (i - 1) % 10 !== 0){
+                                                    td_you_i_d[i-12].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 8 < 100 && (i - 1) % 10 !== 0){
+                                                    td_you_i_d[i+8].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+
+                                                td_you[i-1].value = 3;
+                                                ship_3++;
+
+                                                console.log(i-1);
+                                                console.log(td_you[i-1].value);
+
+                                                ship_three = true;
+                                            }
+                                        };
+                                    }
+
+                                    if(i + 2 < 100){
+                                        td_you_i_d[i+2].onclick = function(){
+                                            if(td_you_i_d[i+2].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_i_d[i+2].value === 3){
+                                                alert('Error');
+                                            }
+                                            else{
+                                                color_ship(i+2);
+
+                                                if(i - 1 >= 0 && (i - 1 - 9) % 10 !== 0){
+                                                    td_you_i_d[i-1].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 3 < 100 && (i + 3) % 10 !== 0){
+                                                    td_you_i_d[i+3].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i - 7 >= 0 && (i - 7) % 10 !== 0){
+                                                    td_you_i_d[i-7].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 13 < 100 && (i + 13) % 10 !== 0){
+                                                    td_you_i_d[i+13].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+
+                                                td_you[i+2].value = 3;
+                                                ship_3++;
+
+                                                console.log(i+2);
+                                                console.log(td_you[i+2].value);
+
+                                                ship_three = true;
+                                            }
+                                        };
+                                    }
+                                }
                             };
                         }
                     }
@@ -2341,6 +2562,45 @@ for(let i = 0; i < td_you.length; i++){
             }
             else{
                 alert('ship_3 = 2');
+            }
+        } else if(ship_p === 4){
+            if(ship_4 < 4){
+                if(td_you[i].style.background === 'rgba(192, 192, 192, 0.8)' || td_you[i].value === 4){
+                    alert('Error');
+                    console.log(td_you[i].style.background);
+                }
+                else{
+                    if(ship_four){
+                        ship_four = false;
+
+                        color_ship(i);
+
+                        if( i - 11 >= 0 && ((i-11)-9)%10!==0){
+                            td_you[i-11].style.background = 'rgba(192, 192, 192, 0.8)';
+                        }
+                        if( i - 9 >= 0 && (i-9)%10 !== 0){
+                            td_you[i-9].style.background = 'rgba(192, 192, 192, 0.8)';
+                        }
+                        if( i + 9 < 100 && i % 10 !== 0){
+                            td_you[i+9].style.background = 'rgba(192, 192, 192, 0.8)';
+                        }
+                        if( i + 11 < 100 && (i + 11) % 10 !== 0){
+                            td_you[i+11].style.background = 'rgba(192, 192, 192, 0.8)';
+                        }
+
+                        td_you[i].value = 4;
+                        ship_4++;
+
+                        console.log(i);
+                        console.log(td_you[i].value);
+
+
+
+                    }
+                }
+            }
+            else{
+                alert('ship_4 = 1');
             }
         }
     };
