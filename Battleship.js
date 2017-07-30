@@ -3019,6 +3019,422 @@ for(let i = 0; i < td_you.length; i++){
                             };
                         }
 
+                        if(i - 1 >= 0){
+                            let td_you_n_c = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                            td_you_n_c[i-1].onclick = function(){
+                                if(td_you_n_c[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_n_c[i - 1].value === 4){
+                                    alert('Error');
+                                }
+                                else{
+                                    color_ship(i-1);
+
+                                    if(i - 10 >= 0){
+                                        td_you_n_c[i-10].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i + 10 < 100){
+                                        td_you_n_c[i + 10].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i - 12 >= 0 && (i - 12 - 9) % 10 !== 0){
+                                        td_you_n_c[i-12].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i + 8 < 100 && (i + 8 - 9) % 10 !== 0){
+                                        td_you_n_c[i+8].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+
+                                    td_you[i-1].value = 4;
+                                    ship_4++;
+
+                                    console.log(i-1);
+                                    console.log(td_you[i-1].value);
+
+                                    if(i - 2 >= 0){
+                                        let td_you_k_c = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                                        td_you_k_c[i-2].onclick = function(){
+                                            if(td_you_k_c[i - 2].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_c[i - 2].value === 4){
+                                                alert('Error');
+                                            }
+                                            else{
+                                                color_ship(i-2);
+
+                                                if(i - 13 >= 0 && (i - 13 - 9) % 10 !== 0){
+                                                    td_you_k_c[i-13].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 7 < 100 && (i + 7 - 9) % 10 !== 0){
+                                                    td_you_k_c[i+7].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+
+                                                td_you[i-2].value = 4;
+                                                ship_4++;
+
+                                                console.log(i-2);
+                                                console.log(td_you[i-2].value);
+
+                                                if(i - 3 >= 0){
+                                                    td_you_k_c[i-3].onclick = function() {
+                                                        if (td_you_k_c[i - 3].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_c[i - 3].value === 4) {
+                                                            alert('Error');
+                                                        }
+                                                        else {
+                                                            color_ship(i-3);
+
+                                                            if(i + 1 < 100 && (i+1) % 10 !== 0){
+                                                                td_you_k_c[i+1].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 14 >= 0 && (i - 14 - 9) % 10 !== 0){
+                                                                td_you_k_c[i-14].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 6 < 100 && (i + 6 - 9) % 10 !== 0){
+                                                                td_you_k_c[i+6].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 4 >= 0 && (i - 4 - 9) % 10 !== 0){
+                                                                td_you_k_c[i-4].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+
+                                                            td_you[i-3].value = 4;
+                                                            ship_4++;
+
+                                                            console.log(i-3);
+                                                            console.log(td_you[i-3].value);
+
+                                                            ship_four = true;
+                                                        }
+                                                    };
+                                                }
+
+                                                if(i + 1 < 100){
+                                                    td_you_k_c[i+1].onclick = function() {
+                                                        if (td_you_k_c[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_c[i + 1].value === 4) {
+                                                            alert('Error');
+                                                        }
+                                                        else {
+                                                            color_ship(i+1);
+
+                                                            if(i - 3 >= 0 && (i - 3 - 9) % 10 !== 0){
+                                                                td_you_k_c[i-3].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 8 >= 0 && (i - 8) % 10 !== 0){
+                                                                td_you_k_c[i-8].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 12 < 100 && (i + 12) % 10 !== 0){
+                                                                td_you_k_c[i+12].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 2 < 100 && (i + 2) % 10 !== 0){
+                                                                td_you_k_c[i+2].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+
+
+                                                            td_you[i+1].value = 4;
+                                                            ship_4++;
+
+                                                            console.log(i+1);
+                                                            console.log(td_you[i+1].value);
+
+                                                            ship_four = true;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        };
+                                    }
+
+                                    if(i + 1 < 100){
+                                        let td_you_k_d = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                                        td_you_k_d[i+1].onclick = function(){
+                                            if(td_you_k_d[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_d[i + 1].value === 4){
+                                                alert('Error');
+                                            }
+                                            else{
+                                                color_ship(i+1);
+
+                                                if(i - 8 >= 0 && (i - 8) % 10 !== 0){
+                                                    td_you_k_d[i-8].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 12 < 100 && (i + 12) % 10 !== 0){
+                                                    td_you_k_d[i+12].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+
+                                                td_you[i+1].value = 4;
+                                                ship_4++;
+
+                                                console.log(i+1);
+                                                console.log(td_you[i+1].value);
+
+                                                if(i - 2 >= 0){
+                                                    td_you_k_d[i-2].onclick = function() {
+                                                        if (td_you_k_d[i - 2].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_d[i - 2].value === 4) {
+                                                            alert('Error');
+                                                        }
+                                                        else {
+                                                            color_ship(i-2);
+
+                                                            if(i + 2 < 100 && (i + 2) % 10 !==0){
+                                                                td_you_k_d[i+2].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 3 >= 0 && (i - 3 - 9) % 10 !== 0){
+                                                                td_you_k_d[i - 3].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 13 >= 0 && (i - 13 - 9) % 10 !== 0){
+                                                                td_you_k_d[i-13].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 7 < 100 && (i + 7 - 9) % 10 !== 0){
+                                                                td_you_k_d[i+7].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+
+                                                            td_you[i-2].value = 4;
+                                                            ship_4++;
+
+                                                            console.log(i-2);
+                                                            console.log(td_you[i-2].value);
+
+                                                            ship_four = true;
+                                                        }
+                                                    };
+                                                }
+                                                if(i + 2 < 100){
+                                                    td_you_k_d[i+2].onclick = function() {
+                                                        if (td_you_k_d[i + 2].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_d[i + 2].value === 4) {
+                                                            alert('Error');
+                                                        }
+                                                        else {
+                                                            color_ship(i+2);
+
+                                                            if(i - 2 >= 0 && (i - 2 - 9) % 10 !== 0){
+                                                                td_you_k_d[i-2].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 3 >= 0 && (i + 3) % 10 !== 0){
+                                                                td_you_k_d[i+3].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 7 >= 0 && (i - 7) % 10 !== 0){
+                                                                td_you_k_d[i-7].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 13 < 100 && (i + 13) % 10 !== 0){
+                                                                td_you_k_d[i+13].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+
+                                                            td_you[i+2].value = 4;
+                                                            ship_4++;
+
+                                                            console.log(i+2);
+                                                            console.log(td_you[i+2].value);
+
+                                                            ship_four = true;
+                                                        }
+                                                    };
+                                                }
+                                            }
+                                        };
+                                    }
+
+                                }
+                            };
+                        }
+
+                        if(i + 1 < 100){
+                            let td_you_n_d = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                            td_you_n_d[i+1].onclick = function(){
+                                if(td_you_n_d[i + 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_n_d[i + 1].value === 4){
+                                    alert('Error');
+                                }
+                                else{
+                                    color_ship(i+1);
+
+                                    if(i - 10 >= 0){
+                                        td_you_n_d[i-10].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i + 10 < 100){
+                                        td_you_n_d[i+10].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i - 8 >= 0 && (i - 8) % 10 !== 0){
+                                        td_you_n_d[i-8].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i + 12 < 100 && (i + 12) % 10 !== 0){
+                                        td_you_n_d[i+12].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+
+                                    td_you[i+1].value = 4;
+                                    ship_4++;
+
+                                    console.log(i+1);
+                                    console.log(td_you[i+1].value);
+
+                                    if(i - 1 >= 0){
+                                        let td_you_k_d_i = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                                        td_you_k_d_i[i-1].onclick = function(){
+                                            if(td_you_k_d_i[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_d_i[i - 1].value === 4){
+                                                alert('Error');
+                                            }
+                                            else{
+                                                color_ship(i-1);
+
+                                                if(i - 12 >= 0 && (i - 12 - 9) % 10 !== 0){
+                                                    td_you_k_d_i[i-12].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 8 < 100 && (i + 8 - 9) % 10 !== 0){
+                                                    td_you_k_d_i[i+8].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+
+                                                td_you[i-1].value = 4;
+                                                ship_4++;
+
+                                                console.log(i-1);
+                                                console.log(td_you[i-1].value);
+
+                                                if(i - 2 >= 0){
+                                                    td_you_k_d_i[i-2].onclick = function() {
+                                                        if (td_you_k_d_i[i - 2].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_d_i[i - 2].value === 4) {
+                                                            alert('Error');
+                                                        }
+                                                        else {
+                                                            color_ship(i-2);
+
+                                                            if(i + 2 < 100 && (i + 2) % 10 !==0){
+                                                                td_you_k_d_i[i+2].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 3 >= 0 && (i - 3 - 9) % 10 !== 0){
+                                                                td_you_k_d_i[i - 3].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 13 >= 0 && (i - 13 - 9) % 10 !== 0){
+                                                                td_you_k_d_i[i-13].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 7 < 100 && (i + 7 - 9) % 10 !== 0){
+                                                                td_you_k_d_i[i+7].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+
+                                                            td_you[i-2].value = 4;
+                                                            ship_4++;
+
+                                                            console.log(i-2);
+                                                            console.log(td_you[i-2].value);
+
+                                                            ship_four = true;
+                                                        }
+                                                    };
+                                                }
+                                                if(i + 2 < 100){
+                                                    td_you_k_d_i[i+2].onclick = function() {
+                                                        if (td_you_k_d_i[i + 2].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_d_i[i + 2].value === 4) {
+                                                            alert('Error');
+                                                        }
+                                                        else{
+                                                            color_ship(i+2);
+
+                                                            if(i - 2 >= 0 && (i - 2 - 9) % 10 !== 0){
+                                                                td_you_k_d_i[i-2].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 3 >= 0 && (i + 3) % 10 !== 0){
+                                                                td_you_k_d_i[i+3].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 7 >= 0 && (i - 7) % 10 !== 0){
+                                                                td_you_k_d_i[i-7].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 13 < 100 && (i + 13) % 10 !== 0){
+                                                                td_you_k_d_i[i+13].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+
+                                                            td_you[i+2].value = 4;
+                                                            ship_4++;
+
+                                                            console.log(i+2);
+                                                            console.log(td_you[i+2].value);
+
+                                                            ship_four = true;
+                                                        }
+                                                    };
+                                                }
+                                            }
+                                        };
+                                    }
+                                    if(i + 2 < 100){
+                                        let td_you_k_c_i = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                                        td_you_k_c_i[i+2].onclick = function(){
+                                            if(td_you_k_c_i[i + 2].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_c_i[i + 2].value === 4){
+                                                alert('Error');
+                                            }
+                                            else{
+                                                color_ship(i+2);
+
+                                                if(i - 7 >= 0 && (i - 7) % 10 !== 0){
+                                                    td_you_k_c_i[i-7].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i + 13 < 100 && (i + 13) % 10 !== 0){
+                                                    td_you_k_c_i[i+13].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+
+                                                td_you[i+2].value = 4;
+                                                ship_4++;
+
+                                                console.log(i+2);
+                                                console.log(td_you[i+2].value);
+
+                                                if(i - 1 >= 0){
+                                                    td_you_k_c_i[i-1].onclick = function(){
+                                                        if (td_you_k_c_i[i - 1].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_c_i[i - 1].value === 4) {
+                                                            alert('Error');
+                                                        }
+                                                        else {
+                                                            color_ship(i-1);
+
+                                                            if(i + 3 >= 0 && (i + 3) % 10 !== 0){
+                                                                td_you_k_c_i[i+3].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 12 >= 0 && (i - 12 - 9) % 10 !== 0){
+                                                                td_you_k_c_i[i-12].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 8 < 100 && (i + 8 - 9) % 10 !== 0){
+                                                                td_you_k_c_i[i+8].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 2 >= 0 && (i - 2 - 9) % 10 !== 0){
+                                                                td_you_k_c_i[i-2].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+
+                                                            td_you[i-1].value = 4;
+                                                            ship_4++;
+
+                                                            console.log(i-1);
+                                                            console.log(td_you[i-1].value);
+
+                                                            ship_four = true;
+                                                        }
+                                                    };
+                                                }
+
+                                                if(i + 3 < 100){
+                                                    td_you_k_c_i[i+3].onclick = function() {
+                                                        if (td_you_k_c_i[i + 3].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_c_i[i + 3].value === 4) {
+                                                            alert('Error');
+                                                        }
+                                                        else {
+                                                            color_ship(i+3);
+
+                                                            if(i - 1 >= 0 && (i - 1 - 9) % 10 !== 0){
+                                                                td_you_k_c_i[i-1].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 6 >= 0 && (i - 6) % 10 !== 0){
+                                                                td_you_k_c_i[i-6].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 14 < 100 && (i + 14) % 10 !== 0){
+                                                                td_you_k_c_i[i+14].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 4 < 100 && (i + 4) % 10 !== 0){
+                                                                td_you_k_c_i[i+4].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+
+                                                            td_you[i+3].value = 4;
+                                                            ship_4++;
+
+                                                            console.log(i+3);
+                                                            console.log(td_you[i+3].value);
+
+                                                            ship_four = true;
+                                                        }
+                                                    };
+                                                }
+                                            }
+                                        };
+                                    }
+                                }
+                            };
+                        }
                     }
                 }
             }
