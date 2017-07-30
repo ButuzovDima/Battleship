@@ -28,9 +28,9 @@ let style_ship = function(a){
     a.style.boxShadow = '0 0 6px 3px #454547';
 };
 
-let p_3 = document.getElementById('p3');
-style_ship(p_3);
-ship_p = 3;
+let p_4 = document.getElementById('p4');
+style_ship(p_4);
+ship_p = 4;
 
 p1.onclick = function(){
     if(ship_two && ship_three && ship_four){
@@ -130,6 +130,8 @@ for(let i = 0; i < td_you.length; i++){
                                 td_you[i+11].style.background = 'rgba(192, 192, 192, 0.8)';
                                 td_you[i+9].style.background = 'rgba(192, 192, 192, 0.8)';
                                 td_you[i].value = 1;
+                                console.log(i);
+                                console.log(td_you[i].value);
                                 ship_1++;
                                 gr = false;
                             }
@@ -2594,7 +2596,428 @@ for(let i = 0; i < td_you.length; i++){
                         console.log(i);
                         console.log(td_you[i].value);
 
+                        if(i - 10 >= 0){
+                            let td_you_n_a = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                            td_you_n_a[i-10].onclick = function(){
+                                if(td_you_n_a[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_n_a[i - 10].value === 4){
+                                    alert('Error');
+                                }
+                                else{
+                                    color_ship(i-10);
 
+                                    if(i + 1 < 100 && (i + 1) % 10 !== 0){
+                                        td_you_n_a[i+1].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i - 1 >= 0 && ((i-1)-9) % 10 !== 0){
+                                        td_you_n_a[i-1].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i - 21 >= 0 && i % 10 !== 0){
+                                        td_you_n_a[i-21].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i - 19 >= 0 && (i - 19) % 10 !== 0){
+                                        td_you_n_a[i-19].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+
+                                    td_you[i-10].value = 4;
+                                    ship_4++;
+
+                                    console.log(i-10);
+                                    console.log(td_you[i-10].value);
+
+                                    if(i - 20 >= 0){
+                                        let td_you_k_a = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                                        td_you_k_a[i-20].onclick = function(){
+                                            if(td_you_k_a[i - 20].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_a[i - 20].value === 4){
+                                                alert('Error');
+                                            }
+                                            else{
+                                                color_ship(i-20);
+
+                                                if(i - 31 >= 0 && i % 10 !== 0 ){
+                                                    td_you_k_a[i - 31].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i - 29 >= 0 && (i - 29) % 10 !== 0){
+                                                    td_you_k_a[i - 29].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+
+                                                td_you[i-20].value = 4;
+                                                ship_4++;
+
+                                                console.log(i-20);
+                                                console.log(td_you[i-20].value);
+
+                                                if(i - 30 >= 0){
+                                                    td_you_k_a[i-30].onclick = function(){
+                                                        if(td_you_k_a[i - 30].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_a[i - 30].value === 4){
+                                                            alert('Error');
+                                                        }
+                                                        else{
+                                                            color_ship(i-30);
+
+                                                            if(i - 41 >= 0 && i % 10 !== 0 ){
+                                                                td_you_k_a[i - 41].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 39 >= 0 && (i - 39) % 10 !== 0){
+                                                                td_you_k_a[i - 39].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 40 >= 0){
+                                                                td_you_k_a[i - 40].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 10 < 100){
+                                                                td_you_k_a[i + 10].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+
+                                                            td_you[i-30].value = 4;
+                                                            ship_4++;
+
+                                                            console.log(i-30);
+                                                            console.log(td_you[i-30].value);
+
+                                                            ship_four = true;
+                                                        }
+                                                    };
+                                                }
+
+                                                if(i + 10 < 100){
+                                                    td_you_k_a[i+10].onclick = function(){
+                                                        if(td_you_k_a[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_a[i + 10].value === 4){
+                                                            alert('Error');
+                                                        }
+                                                        else{
+                                                            color_ship(i+10);
+
+                                                            if(i-30 >= 0){
+                                                                td_you_k_a[i-30].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i+20 < 100){
+                                                                td_you_k_a[i+20].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if( i + 19 < 100 && i % 10 !== 0){
+                                                                td_you[i+19].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if( i + 21 < 100 && (i + 21) % 10 !== 0){
+                                                                td_you[i+21].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+
+                                                            td_you[i+10].value = 4;
+                                                            ship_4++;
+
+                                                            console.log(i+10);
+                                                            console.log(td_you[i+10].value);
+
+                                                            ship_four = true;
+                                                        }
+                                                    };
+                                                }
+                                            }
+                                        };
+                                    }
+
+                                    if(i + 10 < 100){
+                                        let td_you_k_b = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                                        td_you_k_b[i+10].onclick = function(){
+                                            if(td_you_k_b[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_b[i + 10].value === 4){
+                                                alert('Error');
+                                            }
+                                            else{
+                                                color_ship(i+10);
+
+                                                if( i + 19 < 100 && i % 10 !== 0){
+                                                    td_you_k_b[i+19].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if( i + 21 < 100 && (i + 21) % 10 !== 0){
+                                                    td_you_k_b[i+21].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+
+                                                td_you[i+10].value = 4;
+                                                ship_4++;
+
+                                                console.log(i+10);
+                                                console.log(td_you[i+10].value);
+
+                                                if(i - 20 >= 0){
+                                                    td_you_k_b[i-20].onclick = function(){
+                                                        if(td_you_k_b[i - 20].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_b[i - 20].value === 4){
+                                                            alert('Error');
+                                                        }
+                                                        else{
+                                                            color_ship(i-20);
+
+                                                            if(i - 31 >= 0 && i % 10 !== 0 ){
+                                                                td_you_k_b[i - 31].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 29 >= 0 && (i - 29) % 10 !== 0){
+                                                                td_you_k_b[i - 29].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 30 >= 0){
+                                                                td_you_k_b[i - 30].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 20 < 100){
+                                                                td_you_k_b[i+20].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+
+                                                            td_you[i-20].value = 4;
+                                                            ship_4++;
+
+                                                            console.log(i-20);
+                                                            console.log(td_you[i-20].value);
+
+                                                            ship_four = true;
+                                                        }
+                                                    };
+                                                }
+
+                                                if(i + 20 < 100){
+                                                    td_you_k_b[i+20].onclick = function(){
+                                                        if(td_you_k_b[i + 20].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_b[i + 20].value === 4){
+                                                            alert('Error');
+                                                        }
+                                                        else{
+                                                            color_ship(i+20);
+
+                                                            if(i - 20 >= 0){
+                                                                td_you_k_b[i-20].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if( i + 29 < 100 && i % 10 !== 0){
+                                                                td_you_k_b[i+29].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if( i + 31 < 100 && (i + 21) % 10 !== 0){
+                                                                td_you_k_b[i+31].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 30 < 100){
+                                                                td_you_k_b[i+30].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+
+                                                            td_you[i+20].value = 4;
+                                                            ship_4++;
+
+                                                            console.log(i+20);
+                                                            console.log(td_you[i+20].value);
+
+                                                            ship_four = true;
+
+                                                        }
+                                                    };
+                                                }
+
+                                            }
+                                        };
+                                    }
+
+                                }
+                            };
+                        }
+
+                        if(i + 10 < 100){
+                            let td_you_n_b = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                            td_you_n_b[i+10].onclick = function(){
+                                if(td_you_n_b[i + 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_n_b[i + 10].value === 4){
+                                    alert('Error');
+                                }
+                                else{
+                                    color_ship(i+10);
+
+                                    if(i + 1 < 100 && (i + 1) % 10 !== 0){
+                                        td_you_n_b[i+1].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if(i - 1 >= 0 && ((i-1)-9) % 10 !== 0){
+                                        td_you_n_b[i-1].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if( i + 19 < 100 && i % 10 !== 0){
+                                        td_you_n_b[i+19].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+                                    if( i + 21 < 100 && (i + 21) % 10 !== 0){
+                                        td_you_n_b[i+21].style.background = 'rgba(192, 192, 192, 0.8)';
+                                    }
+
+                                    td_you[i+10].value = 4;
+                                    ship_4++;
+
+                                    console.log(i+10);
+                                    console.log(td_you[i+10].value);
+
+                                    if(i - 10 >= 0){
+                                        let td_you_k_a_i = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                                        td_you_k_a_i[i-10].onclick = function(){
+                                            if(td_you_k_a_i[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_a_i[i - 10].value === 4){
+                                                alert('Error');
+                                            }
+                                            else{
+                                                color_ship(i-10);
+
+                                                if(i - 21 >= 0 && i % 10 !== 0){
+                                                    td_you_k_a_i[i-21].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if(i - 19 >= 0 && (i - 19) % 10 !== 0){
+                                                    td_you_k_a_i[i-19].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+
+                                                td_you[i-10].value = 4;
+                                                ship_4++;
+
+                                                console.log(i-10);
+                                                console.log(td_you[i-10].value);
+
+                                                if(i - 20 >= 0){
+                                                    td_you_k_a_i[i-20].onclick = function(){
+                                                        if(td_you_k_a_i[i - 20].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_a_i[i - 20].value === 4){
+                                                            alert('Error');
+                                                        }
+                                                        else{
+                                                            color_ship(i-20);
+
+                                                            if(i - 31 >= 0 && i % 10 !== 0 ){
+                                                                td_you_k_a_i[i - 31].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 29 >= 0 && (i - 29) % 10 !== 0){
+                                                                td_you_k_a_i[i - 29].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 30 >= 0){
+                                                                td_you_k_a_i[i - 30].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 20 < 100){
+                                                                td_you_k_a_i[i + 20].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+
+                                                            td_you[i-20].value = 4;
+                                                            ship_4++;
+
+                                                            console.log(i-20);
+                                                            console.log(td_you[i-20].value);
+
+                                                            ship_four = true;
+                                                        }
+                                                    };
+                                                }
+
+                                                if(i + 20 < 100){
+                                                    td_you_k_a_i[i+20].onclick = function(){
+                                                        if(td_you_k_a_i[i + 20].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_a_i[i + 20].value === 4){
+                                                            alert('Error');
+                                                        }
+                                                        else{
+                                                            color_ship(i+20);
+
+                                                            if(i-20 >= 0){
+                                                                td_you_k_a_i[i-20].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if( i + 29 < 100 && i % 10 !== 0){
+                                                                td_you_k_a_i[i+29].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if( i + 31 < 100 && (i + 31) % 10 !== 0){
+                                                                td_you_k_a_i[i+31].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 30 < 100){
+                                                                td_you_k_a_i[i + 30].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+
+                                                            td_you[i+20].value = 4;
+                                                            ship_4++;
+
+                                                            console.log(i+20);
+                                                            console.log(td_you[i+20].value);
+
+                                                            ship_four = true;
+                                                        }
+                                                    };
+                                                }
+                                            }
+                                        };
+                                    }
+
+                                    if(i + 20 < 100){
+                                        let td_you_k_b_i = document.querySelectorAll('#table_one > tbody > tr > td:not(:nth-child(1))');
+                                        td_you_k_b_i[i+20].onclick = function(){
+                                            if(td_you_k_b_i[i + 20].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_b_i[i + 20].value === 4){
+                                                alert('Error');
+                                            }
+                                            else{
+                                                color_ship(i+20);
+
+                                                if( i + 29 < 100 && i % 10 !== 0){
+                                                    td_you_n_b[i+29].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+                                                if( i + 31 < 100 && (i + 21) % 10 !== 0){
+                                                    td_you_n_b[i+31].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                }
+
+                                                td_you[i+20].value = 4;
+                                                ship_4++;
+
+                                                console.log(i+20);
+                                                console.log(td_you[i+20].value);
+
+                                                if(i + 30 < 100){
+                                                    td_you_k_b_i[i+30].onclick = function(){
+                                                        if(td_you_k_b_i[i + 30].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_b_i[i + 30].value === 4){
+                                                            alert('Error');
+                                                        }
+                                                        else{
+                                                            color_ship(i+30);
+
+                                                            if( i + 39 < 100 && i % 10 !== 0){
+                                                                td_you_n_b[i+39].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if( i + 41 < 100 && (i + 21) % 10 !== 0){
+                                                                td_you_n_b[i+41].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 40 < 100){
+                                                                td_you_n_b[i+40].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 10 >= 0){
+                                                                td_you_n_b[i-10].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+
+                                                            td_you[i+30].value = 4;
+                                                            ship_4++;
+
+                                                            console.log(i+30);
+                                                            console.log(td_you[i+30].value);
+
+                                                            ship_four = true;
+                                                        }
+                                                    };
+                                                }
+
+                                                if(i - 10 >= 0){
+                                                    td_you_k_b_i[i-10].onclick = function(){
+                                                        if(td_you_k_b_i[i - 10].style.background === 'rgba(192, 192, 192, 0.8)' || td_you_k_b_i[i - 10].value === 4){
+                                                            alert('Error');
+                                                        }
+                                                        else{
+                                                            color_ship(i-10);
+
+                                                            if(i - 21 >= 0 && i % 10 !== 0 ){
+                                                                td_you_k_b_i[i - 21].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 19 >= 0 && (i - 29) % 10 !== 0){
+                                                                td_you_k_b_i[i - 19].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i - 20 >= 0){
+                                                                td_you_k_b_i[i - 20].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+                                                            if(i + 30 < 100){
+                                                                td_you_k_b_i[i + 30].style.background = 'rgba(192, 192, 192, 0.8)';
+                                                            }
+
+                                                            td_you[i-10].value = 4;
+                                                            ship_4++;
+
+                                                            console.log(i-10);
+                                                            console.log(td_you[i-10].value);
+
+                                                            ship_four = true;
+                                                        }
+                                                    };
+
+                                                }
+                                            }
+                                        };
+                                    }
+
+                                }
+                            };
+                        }
 
                     }
                 }
