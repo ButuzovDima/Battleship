@@ -10,7 +10,7 @@ let ship_three = true;
 let ship_four = true;
 
 
-/*--------------------------ship_menu-------------------------------*/
+/*--------------------------begin ship_menu-------------------------------*/
 let fa_ship = document.getElementsByClassName('fa-ship');
 let style_ship = function(a){
     for(let i = 0; i < fa_ship.length; i++){
@@ -28,9 +28,9 @@ let style_ship = function(a){
     a.style.boxShadow = '0 0 6px 3px #454547';
 };
 
-let p_4 = document.getElementById('p4');
-style_ship(p_4);
-ship_p = 4;
+let p_1 = document.getElementById('p1');
+style_ship(p_1);
+ship_p = 1;
 
 p1.onclick = function(){
     if(ship_two && ship_three && ship_four){
@@ -61,19 +61,82 @@ p4.onclick = function(){
         style_ship(p_4);
     }
 };
+/*--------------------------end ship_menu-------------------------------*/
+
 /*------------------------table_one---------------------------------*/
 
-/*-------------------------color_ship-------------------------------*/
+/*-------------------------begin color_ship-------------------------------*/
 function color_ship(a){
     td_you[a].style.background = 'brown';
 }
+/*-------------------------end color_ship-------------------------------*/
 
-/*-------заполняем таблицу_1 нулями --------*/
+/*-------заполняем таблицу 1 И 2 нулями --------*/
 for(let i = 0; i < td_you.length; i++){
     td_you[i].value = 0;
 }
-/*-----------------------------------------*/
+for(let i = 0; i < td_pc.length; i++){
+    td_pc[i].value = 0;
+}
+/*--------------------end---------------------*/
 
+/*-------------begin ship td_pc---------------*/
+
+/*-----------расставляем однопалубные корабли-----------*/
+for(let i = 0; i < 4; i++){
+    let rand = Math.floor(Math.random()*100);
+    if(td_pc[rand].value !== 1 && td_pc[rand].value !== 2 && td_pc[rand].value !== 3 && td_pc[rand].value !== 4 && td_pc[rand].value !== 5 ){
+
+        td_pc[rand].style.background = 'brown';
+        td_pc[rand].value = 1;
+        console.log(rand);
+        console.log(td_pc[rand].value);
+
+        if(rand + 1 < 100 && (rand + 1) % 10 !== 0){
+            td_pc[rand + 1].style.background = 'rgba(192, 192, 192, 0.8)';
+            td_pc[rand + 1].value = 5;
+        }
+        if(rand - 1 >= 0 && (rand - 1 - 9) % 10 !== 0 ){
+            td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
+            td_pc[rand - 1].value = 5;
+        }
+        if(rand + 10 < 100){
+            td_pc[rand + 10].style.background = 'rgba(192, 192, 192, 0.8)';
+            td_pc[rand + 10].value = 5;
+        }
+        if(rand - 10 >= 0){
+            td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
+            td_pc[rand - 10].value = 5;
+        }
+        if(rand - 11 >= 0 && (rand - 11 - 9) % 10 !== 0){
+            td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
+            td_pc[rand - 11].value = 5;
+        }
+        if(rand + 11 < 100 && (rand + 11) % 10 !== 0){
+            td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
+            td_pc[rand + 11].value = 5;
+        }
+        if(rand + 9 < 100 && (rand + 9 - 9) % 10 !== 0){
+            td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
+            td_pc[rand + 9].value = 5;
+        }
+        if(rand - 9 >= 0 && (rand - 9) % 10 !== 0){
+            td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
+            td_pc[rand - 9].value = 5;
+        }
+
+    }
+    else{
+        rand = 0;
+        rand = Math.floor(Math.random()*100);
+        i = i - 1;
+    }
+}
+
+
+
+
+/*-------------begin ship td_you---------------*/
 for(let i = 0; i < td_you.length; i++){
     td_you[i].onclick = function(){
         if(ship_p === 1){
@@ -3444,6 +3507,8 @@ for(let i = 0; i < td_you.length; i++){
         }
     };
 }
+/*-------------end ship td_you---------------*/
+
 
 let m = [];
 start.onclick = function(){
@@ -3451,4 +3516,5 @@ start.onclick = function(){
         m[i] = td_you[i].value;
     }
     console.log(m);
+
 };
