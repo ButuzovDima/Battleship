@@ -82,10 +82,373 @@ for(let i = 0; i < td_pc.length; i++){
 
 /*-------------begin ship td_pc---------------*/
 
+/*----------------расставляем 4-х палубные корабли-----------*/
+
+let posRand = Math.floor(Math.random()*2);
+if(posRand === 0){
+    let rand = Math.floor(Math.random()*70);
+
+    td_pc[rand].style.background = 'brown';
+    td_pc[rand].value = 4;
+    console.log(rand);
+    console.log(td_pc[rand].value);
+
+    td_pc[rand+10].style.background = 'brown';
+    td_pc[rand+10].value = 4;
+    console.log(rand+10);
+    console.log(td_pc[rand+10].value);
+
+    td_pc[rand+20].style.background = 'brown';
+    td_pc[rand+20].value = 4;
+    console.log(rand+20);
+    console.log(td_pc[rand+20].value);
+
+    td_pc[rand+30].style.background = 'brown';
+    td_pc[rand+30].value = 4;
+    console.log(rand+30);
+    console.log(td_pc[rand+30].value);
+
+    if(rand - 10 >= 0){
+        td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand - 10].value = 5;
+    }
+    if(rand + 40 < 100){
+        td_pc[rand + 40].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 40].value = 5;
+    }
+    if(rand - 11 >= 0 && (rand - 11 - 9) % 10 !== 0){
+        td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand - 11].value = 5;
+    }
+    if(rand - 9 >= 0 && (rand - 9) % 10 !== 0){
+        td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand - 9].value = 5;
+    }
+    if(rand - 1 >= 0 && (rand - 1 - 9) % 10 !== 0){
+        td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand - 1].value = 5;
+    }
+    if(rand + 1 < 100 && (rand + 1) % 10 !== 0){
+        td_pc[rand + 1].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 1].value = 5;
+    }
+    if(rand + 9 < 100 && (rand + 9 - 9) % 10 !== 0){
+        td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 9].value = 5;
+    }
+    if(rand + 11 < 100 && (rand + 11) % 10 !== 0){
+        td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 11].value = 5;
+    }
+    if(rand + 19 < 100 && (rand + 19 - 9) % 10 !== 0){
+        td_pc[rand + 19].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 19].value = 5;
+    }
+    if(rand + 21 < 100 && (rand + 21) % 10 !== 0){
+        td_pc[rand + 21].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 21].value = 5;
+    }
+    if(rand + 29 < 100 && (rand + 29 - 9) % 10 !== 0){
+        td_pc[rand + 29].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 29].value = 5;
+    }
+    if(rand + 31 < 100 && (rand + 31) % 10 !== 0){
+        td_pc[rand + 31].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 31].value = 5;
+    }
+    if(rand + 39 < 100 && (rand + 39 - 9) % 10 !== 0){
+        td_pc[rand + 39].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 39].value = 5;
+    }
+    if(rand + 41 < 100 && (rand + 41) % 10 !== 0){
+        td_pc[rand + 41].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 41].value = 5;
+    }
+}
+else{
+    let rand;
+    let t = true;
+    while (t) {
+        rand = Math.floor(Math.random() * 100);
+        t = false;
+        for (let i = 9; i < 100; i += 10) {
+            if (rand === i) {
+                t = true;
+                break;
+            }
+        }
+        for(let i = 8; i < 99; i += 10){
+            if (rand === i) {
+                t = true;
+                break;
+            }
+        }
+        for(let i = 7; i < 98; i += 10){
+            if (rand === i) {
+                t = true;
+                break;
+            }
+        }
+    }
+
+    td_pc[rand].style.background = 'brown';
+    td_pc[rand].value = 4;
+    console.log(rand);
+    console.log(td_pc[rand].value);
+
+    td_pc[rand+1].style.background = 'brown';
+    td_pc[rand+1].value = 4;
+    console.log(rand+1);
+    console.log(td_pc[rand+1].value);
+
+    td_pc[rand+2].style.background = 'brown';
+    td_pc[rand+2].value = 4;
+    console.log(rand+2);
+    console.log(td_pc[rand+2].value);
+
+    td_pc[rand+3].style.background = 'brown';
+    td_pc[rand+3].value = 4;
+    console.log(rand+3);
+    console.log(td_pc[rand+3].value);
+
+    if(rand - 1 >= 0 && (rand - 1 - 9) % 10 !== 0){
+        td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand - 1].value = 5;
+    }
+    if(rand - 11 >= 0 && (rand - 11 - 9) % 10 !== 0){
+        td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand - 11].value = 5;
+    }
+    if(rand + 9 < 100 && (rand + 9 - 9) % 10 !== 0){
+        td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 9].value = 5;
+    }
+    if(rand - 10 >= 0){
+        td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand - 10].value = 5;
+    }
+    if(rand + 10 < 100){
+        td_pc[rand + 10].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 10].value = 5;
+    }
+    if(rand - 9 >= 0){
+        td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand - 9].value = 5;
+    }
+    if(rand + 11 < 100){
+        td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 11].value = 5;
+    }
+    if(rand + 4 < 100 && (rand + 4) % 10 !== 0){
+        td_pc[rand + 4].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 4].value = 5;
+    }
+    if(rand - 8 >= 0 && (rand - 8) % 10 !== 0){
+        td_pc[rand - 8].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand - 8].value = 5;
+    }
+    if(rand + 12 < 100 && (rand + 12) % 10 !== 0){
+        td_pc[rand + 12].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 12].value = 5;
+    }
+    if(rand - 7 >= 0 && (rand - 7) % 10 !== 0){
+        td_pc[rand - 7].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand - 7].value = 5;
+    }
+    if(rand + 13 < 100 && (rand + 13) % 10 !== 0){
+        td_pc[rand + 13].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 13].value = 5;
+    }
+    if(rand + 14 < 100 && (rand + 14) % 10 !== 0){
+        td_pc[rand + 14].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand + 14].value = 5;
+    }
+    if(rand - 6 >= 0 && (rand - 6) % 10 !== 0){
+        td_pc[rand - 6].style.background = 'rgba(192, 192, 192, 0.8)';
+        td_pc[rand - 6].value = 5;
+    }
+}
+
+
+/*---------------расставляем трехпалубные корабли-----------*/
+
+for(let i = 0; i < 2; i++){
+    //0 - ver; 1 - hor;
+    let posRand = Math.floor(Math.random()*2);
+    //let posRand = 1;
+    if(posRand === 0){
+        let rand = Math.floor(Math.random()*80);
+        if(td_pc[rand].value !== 1 && td_pc[rand].value !== 2 && td_pc[rand].value !== 3 && td_pc[rand].value !== 4 && td_pc[rand].value !== 5 &&
+            td_pc[rand+10].value !== 1 && td_pc[rand+10].value !== 2 && td_pc[rand+10].value !== 3 && td_pc[rand+10].value !== 4 && td_pc[rand+10].value !== 5 &&
+            td_pc[rand+20].value !== 1 && td_pc[rand+20].value !== 2 && td_pc[rand+20].value !== 3 && td_pc[rand+20].value !== 4 && td_pc[rand+20].value !== 5){
+
+            td_pc[rand].style.background = 'brown';
+            td_pc[rand].value = 3;
+            console.log(rand);
+            console.log(td_pc[rand].value);
+
+            td_pc[rand+10].style.background = 'brown';
+            td_pc[rand+10].value = 3;
+            console.log(rand+10);
+            console.log(td_pc[rand+10].value);
+
+            td_pc[rand+20].style.background = 'brown';
+            td_pc[rand+20].value = 3;
+            console.log(rand+20);
+            console.log(td_pc[rand+20].value);
+
+            if(rand - 10 >= 0){
+                td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand - 10].value = 5;
+            }
+            if(rand + 30 < 100){
+                td_pc[rand + 30].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand + 30].value = 5;
+            }
+            if(rand - 11 >= 0 && (rand - 11 - 9) % 10 !== 0){
+                td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand - 11].value = 5;
+            }
+            if(rand - 9 >= 0 && (rand - 9) % 10 !== 0){
+                td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand - 9].value = 5;
+            }
+            if(rand - 1 >= 0 && (rand - 1 - 9) % 10 !== 0){
+                td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand - 1].value = 5;
+            }
+            if(rand + 1 < 100 && (rand + 1) % 10 !== 0){
+                td_pc[rand + 1].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand + 1].value = 5;
+            }
+            if(rand + 9 < 100 && (rand + 9 - 9) % 10 !== 0){
+                td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand + 9].value = 5;
+            }
+            if(rand + 11 < 100 && (rand + 11) % 10 !== 0){
+                td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand + 11].value = 5;
+            }
+            if(rand + 19 < 100 && (rand + 19 - 9) % 10 !== 0){
+                td_pc[rand + 19].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand + 19].value = 5;
+            }
+            if(rand + 21 < 100 && (rand + 21) % 10 !== 0){
+                td_pc[rand + 21].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand + 21].value = 5;
+            }
+            if(rand + 29 < 100 && (rand + 29 - 9) % 10 !== 0){
+                td_pc[rand + 29].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand + 29].value = 5;
+            }
+            if(rand + 31 < 100 && (rand + 31) % 10 !== 0){
+                td_pc[rand + 31].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand + 31].value = 5;
+            }
+        }
+        else{
+            i = i - 1;
+        }
+    }
+    else{
+        let rand;
+        let t = true;
+        while (t) {
+            rand = Math.floor(Math.random() * 100);
+            t = false;
+            for (let i = 9; i < 100; i += 10) {
+                if (rand === i) {
+                    t = true;
+                    break;
+                }
+            }
+            for(let i = 8; i < 99; i += 10){
+                if (rand === i) {
+                    t = true;
+                    break;
+                }
+            }
+        }
+
+        if(td_pc[rand].value !== 1 && td_pc[rand].value !== 2 && td_pc[rand].value !== 3 && td_pc[rand].value !== 4 && td_pc[rand].value !== 5 &&
+            td_pc[rand+1].value !== 1 && td_pc[rand+1].value !== 2 && td_pc[rand+1].value !== 3 && td_pc[rand+1].value !== 4 && td_pc[rand+1].value !== 5 &&
+            td_pc[rand+2].value !== 1 && td_pc[rand+2].value !== 2 && td_pc[rand+2].value !== 3 && td_pc[rand+2].value !== 4 && td_pc[rand+2].value !== 5){
+
+            td_pc[rand].style.background = 'brown';
+            td_pc[rand].value = 3;
+            console.log(rand);
+            console.log(td_pc[rand].value);
+
+            td_pc[rand+1].style.background = 'brown';
+            td_pc[rand+1].value = 3;
+            console.log(rand+1);
+            console.log(td_pc[rand+1].value);
+
+            td_pc[rand+2].style.background = 'brown';
+            td_pc[rand+2].value = 3;
+            console.log(rand+2);
+            console.log(td_pc[rand+2].value);
+
+            if(rand - 1 >= 0 && (rand - 1 - 9) % 10 !== 0){
+                td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand - 1].value = 5;
+            }
+            if(rand - 11 >= 0 && (rand - 11 - 9) % 10 !== 0){
+                td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand - 11].value = 5;
+            }
+            if(rand + 9 < 100 && (rand + 9 - 9) % 10 !== 0){
+                td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand + 9].value = 5;
+            }
+            if(rand - 10 >= 0){
+                td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand - 10].value = 5;
+            }
+            if(rand + 10 < 100){
+                td_pc[rand + 10].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand + 10].value = 5;
+            }
+            if(rand - 9 >= 0){
+                td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand - 9].value = 5;
+            }
+            if(rand + 11 < 100){
+                td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand + 11].value = 5;
+            }
+            if(rand + 3 < 100 && (rand + 3) % 10 !== 0){
+                td_pc[rand + 3].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand + 3].value = 5;
+            }
+            if(rand - 8 >= 0 && (rand - 8) % 10 !== 0){
+                td_pc[rand - 8].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand - 8].value = 5;
+            }
+            if(rand + 12 < 100 && (rand + 12) % 10 !== 0){
+                td_pc[rand + 12].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand + 12].value = 5;
+            }
+            if(rand - 7 >= 0 && (rand - 7) % 10 !== 0){
+                td_pc[rand - 7].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand - 7].value = 5;
+            }
+            if(rand + 13 < 100 && (rand + 13) % 10 !== 0){
+                td_pc[rand + 13].style.background = 'rgba(192, 192, 192, 0.8)';
+                td_pc[rand + 13].value = 5;
+            }
+
+        }
+        else{
+            i = i - 1;
+        }
+    }
+}
+
 /*---------------расставляем двухпалобные корабли----------*/
 
 for(let i = 0; i < 3; i++){
-    //0 - horiz; 1 - vert;
+    //0 - ver; 1 - hor;
     let posRand = Math.floor(Math.random()*2);
     if(posRand === 0){
         let rand = Math.floor(Math.random()*90);
@@ -269,7 +632,6 @@ for(let i = 0; i < 4; i++){
         i = i - 1;
     }
 }
-
 
 
 
