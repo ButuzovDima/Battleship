@@ -4008,12 +4008,117 @@ for(let i = 0; i < td_you.length; i++){
 }
 /*-------------end ship td_you---------------*/
 
+/*---------------start game-------------------*/
+let shotShipColor = function(n){
+    td_pc[n].style.background = 'rgba(230, 0, 0, 0.8)';
+};
+let shotColor = function(n){
+    td_pc[n].style.background = 'rgba(89, 89, 89, 0.8)';
+};
+let shotShipColorPC = function(n){
+    td_you[n].style.background = 'rgba(230, 0, 0, 0.8)';
+};
+let shotColorPC = function(n){
+    td_you[n].style.background = 'rgba(89, 89, 89, 0.8)';
+};
 
-let m = [];
+let shotShipPC = 0;
+let shotShipYou = 0;
+
+let game = false;
 start.onclick = function(){
-    for(let i = 0; i < td_you.length; i++){
-        m[i] = td_you[i].value;
+    if(ship_1 !== 4 || ship_2 !== 6 || ship_3 !== 6 || ship_4 !== 4){
+        alert('Расставте все корабли');
     }
-    console.log(m);
+    else{
+        game = true;
+        alert('ok');
+        return game;
+    }
 
 };
+
+for(let i = 0; i < td_pc.length; i++){
+    td_pc[i].onclick = function(){
+        if(game && shotShipYou < 21 && shotShipPC < 21){
+            if(td_pc[i].value === 6){
+                alert('Выстрел уже произведен');
+            }
+            else if(td_pc[i].value === 1) {
+                td_pc[i].value = 6;
+                shotShipColor(i);
+                console.log(td_pc[i]);
+
+                shotShipYou++;
+
+                if(i + 1 < 100 && (i + 1) % 10 !== 0){
+                    shotColor(i+1);
+                    td_pc[i + 1].value = 6;
+                }
+                if(i - 1 >= 0 && (i - 1 - 9) % 10 !== 0 ){
+                    shotColor(i-1);
+                    td_pc[i - 1].value = 6;
+                }
+                if(i + 10 < 100){
+                    shotColor(i+10);
+                    td_pc[i + 10].value = 6;
+                }
+                if(i - 10 >= 0){
+                    shotColor(i-10);
+                    td_pc[i - 10].value = 6;
+                }
+                if(i - 11 >= 0 && (i - 11 - 9) % 10 !== 0){
+                    shotColor(i-11);
+                    td_pc[i - 11].value = 6;
+                }
+                if(i + 11 < 100 && (i + 11) % 10 !== 0){
+                    shotColor(i+11);
+                    td_pc[i + 11].value = 6;
+                }
+                if(i + 9 < 100 && (i + 9 - 9) % 10 !== 0){
+                    shotColor(i+9);
+                    td_pc[i + 9].value = 6;
+                }
+                if(i - 9 >= 0 && (i - 9) % 10 !== 0){
+                    shotColor(i-9);
+                    td_pc[i - 9].value = 6;
+                }
+            }
+            else if(td_pc[i].value === 2){
+
+            }
+            else if(td_pc[i].value === 3){
+
+            }
+            else if(td_pc[i].value === 4){
+
+            }
+            else if(td_pc[i].value === 5 || td_pc[i].value === 0){
+                td_pc[i].value = 6;
+                shotColor(i);
+
+                let randShot;
+                let trandShot = true;
+                while (trandShot) {
+                    randShot = Math.floor(Math.random()*100);
+                    trandShot = false;
+                    if(td_you[randShot].value === 6){
+                        trandShot = true;
+                    }
+                }
+
+                shotShipColorPC(randShot);
+                td_you[randShot].value = 6;
+
+
+
+            }
+        }
+        else{
+            alert('Расставте все корабли');
+        }
+
+    };
+}
+
+
