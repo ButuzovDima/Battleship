@@ -4053,7 +4053,7 @@ for(let i = 0; i < td_pc.length; i++){
             alert('Вы проиграли!');
         }
         else if(game && shotShipYou < 21 && shotShipPC < 21){
-            if(td_pc[i].value === 6 || td_pc[i].value === 7){
+            if(td_pc[i].value === 6 || td_pc[i].value === 7 || td_pc[i].value === 8 || td_pc[i].value === 9 || td_pc[i].value === 10){
                 alert('Выстрел уже произведен');
             }
             else if(td_pc[i].value === 1) {
@@ -4100,11 +4100,11 @@ for(let i = 0; i < td_pc.length; i++){
                 youWin(shotShipYou);
             }
             else if(td_pc[i].value === 2){
-                td_pc[i].value = 7;
+                td_pc[i].value = 8;
                 shotShipColor(i);
                 console.log(td_pc[i]);
 
-                if(i+1 < 100 && td_pc[i+1].value === 7){
+                if(i+1 < 100 && (i + 1) % 10 !== 0 && td_pc[i+1].value === 8){
 
                     if(i - 1 >= 0 && (i - 1 - 9) % 10 !== 0 ){
                         shotColor(i-1);
@@ -4149,7 +4149,7 @@ for(let i = 0; i < td_pc.length; i++){
 
                     alert('Двухпалобный корабль потоплен!');
                 }
-                if(i-1 >= 0 && td_pc[i-1].value === 7){
+                if(i-1 >= 0 && (i - 1 - 9) % 10 !== 0 && td_pc[i-1].value === 8){
 
                     if(i - 2 >= 0 && (i - 2 - 9) % 10 !== 0 ){
                         shotColor(i-2);
@@ -4194,7 +4194,7 @@ for(let i = 0; i < td_pc.length; i++){
 
                     alert('Двухпалобный корабль потоплен!');
                 }
-                if(i-10 >= 0 && td_pc[i-10].value === 7){
+                if(i-10 >= 0 && td_pc[i-10].value === 8){
                     if(i - 20 >= 0){
                         shotColor(i-20);
                         td_pc[i - 20].value = 6;
@@ -4239,7 +4239,7 @@ for(let i = 0; i < td_pc.length; i++){
                     alert('Двухпалобный корабль потоплен!');
                 }
 
-                if(i+10 < 100 && td_pc[i+10].value === 7){
+                if(i+10 < 100 && td_pc[i+10].value === 8){
                     if(i - 10 >= 0){
                         shotColor(i-10);
                         td_pc[i - 10].value = 6;
@@ -4288,15 +4288,14 @@ for(let i = 0; i < td_pc.length; i++){
                 youWin(shotShipYou);
             }
             else if(td_pc[i].value === 3){
-                td_pc[i].value = 7;
+                td_pc[i].value = 9;
                 shotShipColor(i);
                 console.log(td_pc[i]);
 
                 for(let k = 0; k < 3; k++){
-
                     if(i + 1 - (2*k - (k*2)%(k+1)) < 100 && i + 1 - (2*k - (k*2)%(k+1)) >= 0 &&
                         i + 2 - (2*k - k%2 - (2*k)%(k+1)) < 100 && i + 2 - (2*k - k%2 - (2*k)%(k+1)) >= 0 &&
-                        td_pc[i + 1 - (2*k - (k*2)%(k+1))].value === 7 && td_pc[i + 2 - (2*k - k%2 - (2*k)%(k+1))].value === 7){
+                        td_pc[i + 1 - (2*k - (k*2)%(k+1))].value === 9 && td_pc[i + 2 - (2*k - k%2 - (2*k)%(k+1))].value === 9){
 
                         if(i - 1 - k >= 0 && (i - 1 - 9 - k) % 10 !== 0){
                             shotColor(i-1-k);
@@ -4350,6 +4349,61 @@ for(let i = 0; i < td_pc.length; i++){
                         alert('Трехпалубный корабль потоплен!');
                     }
 
+                    if(i + 10 - 10*(2*k - (k*2)%(k+1)) < 100 && i + 10 - 10*(2*k - (k*2)%(k+1)) >= 0 &&
+                        i + 20 - 10*(2*k - k%2 - (2*k)%(k+1)) < 100 && i + 20 - 10*(2*k - k%2 - (2*k)%(k+1)) >= 0 &&
+                        td_pc[i + 10 - 10*(2*k - (k*2)%(k+1))].value === 9 && td_pc[i + 20 - 10*(2*k - k%2 - (2*k)%(k+1))].value === 9){
+
+                        if(i - 10 - 10*k >= 0){
+                            shotColor(i - 10 - 10*k);
+                            td_pc[i - 10 - 10*k].value = 6;
+                        }
+                        if(i + 30 - 10*k < 100){
+                            shotColor(i + 30 - 10*k);
+                            td_pc[i + 30 - 10*k].value = 6;
+                        }
+                        if(i - 11 - 10*k >= 0 && (i - 11 - 10*k - 9) % 10 !== 0){
+                            shotColor(i - 11 - 10*k);
+                            td_pc[i - 11 - 10*k].value = 6;
+                        }
+                        if(i - 9 - 10*k >= 0 && (i - 9 - 10*k) % 10 !== 0){
+                            shotColor(i - 9 - 10*k);
+                            td_pc[i - 9 - 10*k].value = 6;
+                        }
+                        if(i - 1 - 10*k >= 0 && (i - 1 - 10*k - 9) % 10 !== 0){
+                            shotColor(i - 1 - 10*k);
+                            td_pc[i - 1 - 10*k].value = 6;
+                        }
+                        if(i + 1 - 10*k < 100 && i + 1 - 10*k >=0 && (i + 1 - 10*k) % 10 !== 0){
+                            shotColor(i + 1 - 10*k);
+                            td_pc[i + 1 - 10*k].value = 6;
+                        }
+                        if(i + 9 - 10*k < 100 && i + 9 - 10*k >=0 && (i + 9 - 10*k - 9) % 10 !== 0){
+                            shotColor(i + 9 - 10*k);
+                            td_pc[i + 9 - 10*k].value = 6;
+                        }
+                        if(i + 11 - 10*k < 100 && i + 11 - 10*k >= 0 && (i + 11 - 10*k) % 10 !== 0){
+                            shotColor(i + 11 - 10*k);
+                            td_pc[i + 11 - 10*k].value = 6;
+                        }
+                        if(i + 19 - 10*k < 100 && i + 19 - 10*k >=0 && (i + 19 - 9) % 10 !== 0){
+                            shotColor(i+19-10*k);
+                            td_pc[i + 19 - 10*k].value = 6;
+                        }
+                        if(i + 21 - 10*k < 100 && i + 21 - 10*k >= 0 && (i + 21 - 10*k) % 10 !== 0){
+                            shotColor(i + 21 - 10*k);
+                            td_pc[i + 21 - 10*k].value = 6;
+                        }
+                        if(i + 29 - 10*k < 100 && (i + 29 - 10*k - 9) % 10 !== 0){
+                            shotColor(i+29-10*k);
+                            td_pc[i + 29 - 10*k].value = 6;
+                        }
+                        if(i + 31 - 10*k < 100 && (i + 31 - 10*k) % 10 !== 0){
+                            shotColor(i+31-10*k);
+                            td_pc[i + 31 - 10*k].value = 6;
+                        }
+
+                        alert('Трехпалубный корабль потоплен!');
+                    }
                 }
 
                 shotShipYou++;
