@@ -4026,9 +4026,20 @@ let youWin = function(n){
         alert('Вы выиграли');
     }
 };
+let pcWin = function(n){
+    if(n === 20){
+        alert('Вы проиграли!');
+    }
+};
 
 let shotShipPC = 0;
 let shotShipYou = 0;
+let arr2 = [];
+let arr3 = [];
+let arr4 = [];
+let cross = [1, -1, 10, -10];
+let lineX = [1, -1];
+let lineY = [10, -10];
 
 
 let game = false;
@@ -4056,7 +4067,7 @@ for(let i = 0; i < td_pc.length; i++){
             if(td_pc[i].value === 6 || td_pc[i].value === 7 || td_pc[i].value === 8 || td_pc[i].value === 9 || td_pc[i].value === 10){
                 alert('Выстрел уже произведен');
             }
-            else if(td_pc[i].value === 1) {
+            else if(td_pc[i].value === 1){
                 td_pc[i].value = 7;
                 shotShipColor(i);
                 console.log(td_pc[i]);
@@ -4901,25 +4912,252 @@ for(let i = 0; i < td_pc.length; i++){
                 td_pc[i].value = 6;
                 shotColor(i);
 
-                let randShot;
-                let trandShot = true;
-                while (trandShot) {
-                    randShot = Math.floor(Math.random()*100);
-                    trandShot = false;
-                    if(td_you[randShot].value === 6){
-                        trandShot = true;
+                let shotPC = function(){
+                    let randShot;
+                    let trandShot = true;
+
+                    if(arr2.length === 1){
+                        trandShot = false;
+                        let randCross;
+                        let trandCross = true;
+
+                        while(trandCross){
+                            trandCross = false;
+                            randCross = Math.floor(Math.random()*4);
+                            randShot = arr2[0] + cross[randCross];
+                            if( (cross[randCross] === 1 && randShot < 100 && randShot % 10 === 0) ||
+                                (cross[randCross] === 1 && randShot > 99) ||
+                                (cross[randCross] === -1 && randShot >= 0 && (randShot - 9) % 10 === 0) ||
+                                (cross[randCross] === -1 && randShot < 0) ||
+                                (cross[randCross] === 10 && randShot > 99) ||
+                                (cross[randCross] === -10 && randShot < 0) ||
+                                td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
+                                trandCross = true;
+                            }
+                        }
                     }
-                }
 
-                shotShipColorPC(randShot);
-                td_you[randShot].value = 6;
+                    while (trandShot) {
+                        randShot = Math.floor(Math.random()*100);
+                        trandShot = false;
+                        if(td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
+                            trandShot = true;
+                        }
+                    }
 
+                    if(td_you[randShot].value === 1){
+                        td_you[randShot].value = 7;
+                        shotShipColorPC(randShot);
 
+                        if(randShot + 1 < 100 && (randShot + 1) % 10 !== 0){
+                            shotColorPC(randShot + 1);
+                            td_you[randShot + 1].value = 6;
+                        }
+                        if(randShot - 1 >= 0 && (randShot - 1 - 9) % 10 !== 0 ){
+                            shotColorPC(randShot - 1);
+                            td_you[randShot - 1].value = 6;
+                        }
+                        if(randShot + 10 < 100){
+                            shotColorPC(randShot + 10);
+                            td_you[randShot + 10].value = 6;
+                        }
+                        if(randShot - 10 >= 0){
+                            shotColorPC(randShot - 10);
+                            td_you[randShot - 10].value = 6;
+                        }
+                        if(randShot - 11 >= 0 && (randShot - 11 - 9) % 10 !== 0){
+                            shotColorPC(randShot - 11);
+                            td_you[randShot - 11].value = 6;
+                        }
+                        if(randShot + 11 < 100 && (randShot + 11) % 10 !== 0){
+                            shotColorPC(randShot + 11);
+                            td_you[randShot + 11].value = 6;
+                        }
+                        if(randShot + 9 < 100 && (randShot + 9 - 9) % 10 !== 0){
+                            shotColorPC(randShot + 9);
+                            td_you[randShot + 9].value = 6;
+                        }
+                        if(randShot - 9 >= 0 && (randShot - 9) % 10 !== 0){
+                            shotColorPC(randShot - 9);
+                            td_you[randShot - 9].value = 6;
+                        }
+
+                        shotShipPC++;
+                        pcWin(shotShipPC);
+                        if(shotShipPC < 20){
+                            setTimeout(shotPC, 1000);
+                        }
+                    }
+
+                    if(td_you[randShot].value === 2){
+                        td_you[randShot].value = 8;
+                        shotShipColorPC(randShot);
+                        arr2.push(randShot);
+
+                        shotShipPC++;
+                        pcWin(shotShipPC);
+                        console.log(arr2.length);
+
+                        /*if(arr2.length === 1){
+                            let _trandCross = true;
+                            let _randShot;
+
+                            while (_trandCross){
+                                _trandCross = false;
+                                let _randCross = Math.floor(Math.random()*4);
+                                _randShot = arr2[0] + cross[_randCross];
+                                if( (cross[_randCross] === 1 && _randShot < 100 && _randShot % 10 === 0) ||
+                                    (cross[_randCross] === 1 && _randShot > 99) ||
+                                    (cross[_randCross] === -1 && _randShot >= 0 && (_randShot - 9) % 10 === 0) ||
+                                    (cross[_randCross] === -1 && _randShot < 0) ||
+                                    (cross[_randCross] === 10 && _randShot > 99) ||
+                                    (cross[_randCross] === -10 && _randShot < 0) ||
+                                    td_you[_randShot].value === 6 || td_you[_randShot].value === 7 || td_you[_randShot].value === 8 || td_you[_randShot].value === 9 || td_you[_randShot].value === 10){
+                                    _trandCross = true;
+                                }
+                            }
+
+                            if(td_you[_randShot].value === 2){
+                                td_you[_randShot].value = 8;
+                                shotShipColorPC(_randShot);
+                                arr2.push(_randShot);
+
+                                shotShipPC++;
+                                pcWin(shotShipPC);
+                            }
+                            else if(td_you[_randShot].value === 0){
+                                td_you[_randShot].value = 6;
+                                shotColorPC(_randShot);
+                            }
+                        }
+                        */
+
+                        if(arr2.length === 2){
+                            arr2 = arr2.sort();
+                            if(arr2[1] - arr2[0] === 1){
+                                if(arr2[0] - 1 >= 0 && (arr2[0] - 1 - 9) % 10 !== 0){
+                                    shotColorPC(arr2[0] - 1);
+                                    td_you[arr2[0] - 1].value = 6;
+                                }
+                                if(arr2[0] - 11 >= 0 && (arr2[0] - 11 - 9) % 10 !== 0){
+                                    shotColorPC(arr2[0] - 11);
+                                    td_you[arr2[0] - 11].value = 6;
+                                }
+                                if(arr2[0] + 9 < 100 && (arr2[0] + 9 - 9) % 10 !== 0){
+                                    shotColorPC(arr2[0] + 9);
+                                    td_you[arr2[0] + 9].value = 6;
+                                }
+                                if(arr2[0] - 10 >= 0){
+                                    shotColorPC(arr2[0] - 10);
+                                    td_you[arr2[0] - 10].value = 6;
+                                }
+                                if(arr2[0] + 10 < 100){
+                                    shotColorPC(arr2[0] + 10);
+                                    td_you[arr2[0] + 10].value = 6;
+                                }
+                                if(arr2[0] - 9 >= 0){
+                                    shotColorPC(arr2[0] - 9);
+                                    td_you[arr2[0] - 9].value = 6;
+                                }
+                                if(arr2[0] + 11 < 100){
+                                    shotColorPC(arr2[0] + 11);
+                                    td_you[arr2[0] + 11].value = 6;
+                                }
+                                if(arr2[0] + 2 < 100 && (arr2[0] + 2) % 10 !== 0){
+                                    shotColorPC(arr2[0] + 2);
+                                    td_you[arr2[0] + 2].value = 6;
+                                }
+                                if(arr2[0] - 8 >= 0 && (arr2[0] - 8) % 10 !== 0){
+                                    shotColorPC(arr2[0] - 8);
+                                    td_you[arr2[0] - 8].value = 6;
+                                }
+                                if(arr2[0] + 12 < 100 && (arr2[0] + 12) % 10 !== 0){
+                                    shotColorPC(arr2[0] + 12);
+                                    td_you[arr2[0] + 12].value = 6;
+                                }
+
+                            }
+                            else if(arr2[1] - arr2[0] === 10){
+                                if(arr2[0] - 10 >= 0){
+                                    shotColorPC(arr2[0] - 10);
+                                    td_you[arr2[0] - 10].value = 6;
+                                }
+                                if(arr2[0] + 20 < 100){
+                                    shotColorPC(arr2[0] + 20);
+                                    td_you[arr2[0] + 20].value = 6;
+                                }
+                                if(arr2[0] - 11 >= 0 && (arr2[0] - 11 - 9) % 10 !== 0){
+                                    shotColorPC(arr2[0] - 11);
+                                    td_you[arr2[0] - 11].value = 6;
+                                }
+                                if(arr2[0] - 9 >= 0 && (arr2[0] - 9) % 10 !== 0){
+                                    shotColorPC(arr2[0] - 9);
+                                    td_you[arr2[0] - 9].value = 6;
+                                }
+                                if(arr2[0] - 1 >= 0 && (arr2[0] - 1 - 9) % 10 !== 0){
+                                    shotColorPC(arr2[0] - 1);
+                                    td_you[arr2[0] - 1].value = 6;
+                                }
+                                if(arr2[0] + 1 < 100 && (arr2[0] + 1) % 10 !== 0){
+                                    shotColorPC(arr2[0] + 1);
+                                    td_you[arr2[0] + 1].value = 6;
+                                }
+                                if(arr2[0] + 9 < 100 && (arr2[0] + 9 - 9) % 10 !== 0){
+                                    shotColorPC(arr2[0] + 9);
+                                    td_you[arr2[0] + 9].value = 6;
+                                }
+                                if(arr2[0] + 11 < 100 && (arr2[0] + 11) % 10 !== 0){
+                                    shotColorPC(arr2[0] + 11);
+                                    td_you[arr2[0] + 11].value = 6;
+                                }
+                                if(arr2[0] + 19 < 100 && (arr2[0] + 19 - 9) % 10 !== 0){
+                                    shotColorPC(arr2[0] + 19);
+                                    td_you[arr2[0] + 19].value = 6;
+                                }
+                                if(arr2[0] + 21 < 100 && (arr2[0] + 21) % 10 !== 0){
+                                    shotColorPC(arr2[0] + 21);
+                                    td_you[arr2[0] + 21].value = 6;
+                                }
+                            }
+                            arr2 = [];
+                            console.log(arr2);
+                            console.log('crash ship 2');
+                        }
+
+                        if(shotShipPC < 20){
+                            setTimeout(shotPC, 1000);
+                        }
+                    }
+
+                    if(td_you[randShot].value === 3){
+                        td_you[randShot].value = 9;
+                        shotShipColorPC(randShot);
+
+                        shotShipPC++;
+                        pcWin(shotShipPC);
+                    }
+
+                    if(td_you[randShot].value === 4){
+                        td_you[randShot].value = 10;
+                        shotShipColorPC(randShot);
+
+                        shotShipPC++;
+                        pcWin(shotShipPC);
+                    }
+
+                    if(td_you[randShot].value === 0){
+                        shotColorPC(randShot);
+                        td_you[randShot].value = 6;
+                    }
+                };
+
+                setTimeout(shotPC, 1000);
+               // shotPC();
 
             }
         }
         else if(!game){
-            alert('Расставте все корабли');
+            alert('Расставте все корабли!');
         }
 
     };
