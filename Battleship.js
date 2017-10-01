@@ -88,80 +88,80 @@ let posRand = Math.floor(Math.random()*2);
 if(posRand === 0){
     let rand = Math.floor(Math.random()*70);
 
-    td_pc[rand].style.background = 'brown';
+    //td_pc[rand].style.background = 'brown';
     td_pc[rand].value = 4;
     console.log(rand);
     console.log(td_pc[rand].value);
 
-    td_pc[rand+10].style.background = 'brown';
+    //td_pc[rand+10].style.background = 'brown';
     td_pc[rand+10].value = 4;
     console.log(rand+10);
     console.log(td_pc[rand+10].value);
 
-    td_pc[rand+20].style.background = 'brown';
+    //td_pc[rand+20].style.background = 'brown';
     td_pc[rand+20].value = 4;
     console.log(rand+20);
     console.log(td_pc[rand+20].value);
 
-    td_pc[rand+30].style.background = 'brown';
+    //td_pc[rand+30].style.background = 'brown';
     td_pc[rand+30].value = 4;
     console.log(rand+30);
     console.log(td_pc[rand+30].value);
 
     if(rand - 10 >= 0){
-        td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand - 10].value = 5;
     }
     if(rand + 40 < 100){
-        td_pc[rand + 40].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand + 40].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 40].value = 5;
     }
     if(rand - 11 >= 0 && (rand - 11 - 9) % 10 !== 0){
-        td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand - 11].value = 5;
     }
     if(rand - 9 >= 0 && (rand - 9) % 10 !== 0){
-        td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
+     //   td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand - 9].value = 5;
     }
     if(rand - 1 >= 0 && (rand - 1 - 9) % 10 !== 0){
-        td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand - 1].value = 5;
     }
     if(rand + 1 < 100 && (rand + 1) % 10 !== 0){
-        td_pc[rand + 1].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand + 1].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 1].value = 5;
     }
     if(rand + 9 < 100 && (rand + 9 - 9) % 10 !== 0){
-        td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 9].value = 5;
     }
     if(rand + 11 < 100 && (rand + 11) % 10 !== 0){
-        td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 11].value = 5;
     }
     if(rand + 19 < 100 && (rand + 19 - 9) % 10 !== 0){
-        td_pc[rand + 19].style.background = 'rgba(192, 192, 192, 0.8)';
+     //   td_pc[rand + 19].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 19].value = 5;
     }
     if(rand + 21 < 100 && (rand + 21) % 10 !== 0){
-        td_pc[rand + 21].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand + 21].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 21].value = 5;
     }
     if(rand + 29 < 100 && (rand + 29 - 9) % 10 !== 0){
-        td_pc[rand + 29].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand + 29].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 29].value = 5;
     }
     if(rand + 31 < 100 && (rand + 31) % 10 !== 0){
-        td_pc[rand + 31].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand + 31].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 31].value = 5;
     }
     if(rand + 39 < 100 && (rand + 39 - 9) % 10 !== 0){
-        td_pc[rand + 39].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand + 39].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 39].value = 5;
     }
     if(rand + 41 < 100 && (rand + 41) % 10 !== 0){
-        td_pc[rand + 41].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand + 41].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 41].value = 5;
     }
 }
@@ -191,80 +191,80 @@ else{
         }
     }
 
-    td_pc[rand].style.background = 'brown';
+    //td_pc[rand].style.background = 'brown';
     td_pc[rand].value = 4;
     console.log(rand);
     console.log(td_pc[rand].value);
 
-    td_pc[rand+1].style.background = 'brown';
+    //td_pc[rand+1].style.background = 'brown';
     td_pc[rand+1].value = 4;
     console.log(rand+1);
     console.log(td_pc[rand+1].value);
 
-    td_pc[rand+2].style.background = 'brown';
+    //td_pc[rand+2].style.background = 'brown';
     td_pc[rand+2].value = 4;
     console.log(rand+2);
     console.log(td_pc[rand+2].value);
 
-    td_pc[rand+3].style.background = 'brown';
+    //td_pc[rand+3].style.background = 'brown';
     td_pc[rand+3].value = 4;
     console.log(rand+3);
     console.log(td_pc[rand+3].value);
 
     if(rand - 1 >= 0 && (rand - 1 - 9) % 10 !== 0){
-        td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand - 1].value = 5;
     }
     if(rand - 11 >= 0 && (rand - 11 - 9) % 10 !== 0){
-        td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand - 11].value = 5;
     }
     if(rand + 9 < 100 && (rand + 9 - 9) % 10 !== 0){
-        td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 9].value = 5;
     }
     if(rand - 10 >= 0){
-        td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand - 10].value = 5;
     }
     if(rand + 10 < 100){
-        td_pc[rand + 10].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand + 10].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 10].value = 5;
     }
     if(rand - 9 >= 0){
-        td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand - 9].value = 5;
     }
     if(rand + 11 < 100){
-        td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 11].value = 5;
     }
     if(rand + 4 < 100 && (rand + 4) % 10 !== 0){
-        td_pc[rand + 4].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand + 4].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 4].value = 5;
     }
     if(rand - 8 >= 0 && (rand - 8) % 10 !== 0){
-        td_pc[rand - 8].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand - 8].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand - 8].value = 5;
     }
     if(rand + 12 < 100 && (rand + 12) % 10 !== 0){
-        td_pc[rand + 12].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand + 12].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 12].value = 5;
     }
     if(rand - 7 >= 0 && (rand - 7) % 10 !== 0){
-        td_pc[rand - 7].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand - 7].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand - 7].value = 5;
     }
     if(rand + 13 < 100 && (rand + 13) % 10 !== 0){
-        td_pc[rand + 13].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand + 13].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 13].value = 5;
     }
     if(rand + 14 < 100 && (rand + 14) % 10 !== 0){
-        td_pc[rand + 14].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand + 14].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand + 14].value = 5;
     }
     if(rand - 6 >= 0 && (rand - 6) % 10 !== 0){
-        td_pc[rand - 6].style.background = 'rgba(192, 192, 192, 0.8)';
+    //    td_pc[rand - 6].style.background = 'rgba(192, 192, 192, 0.8)';
         td_pc[rand - 6].value = 5;
     }
 }
@@ -282,67 +282,67 @@ for(let i = 0; i < 2; i++){
             td_pc[rand+10].value !== 1 && td_pc[rand+10].value !== 2 && td_pc[rand+10].value !== 3 && td_pc[rand+10].value !== 4 && td_pc[rand+10].value !== 5 &&
             td_pc[rand+20].value !== 1 && td_pc[rand+20].value !== 2 && td_pc[rand+20].value !== 3 && td_pc[rand+20].value !== 4 && td_pc[rand+20].value !== 5){
 
-            td_pc[rand].style.background = 'brown';
+           // td_pc[rand].style.background = 'brown';
             td_pc[rand].value = 3;
             console.log(rand);
             console.log(td_pc[rand].value);
 
-            td_pc[rand+10].style.background = 'brown';
+           // td_pc[rand+10].style.background = 'brown';
             td_pc[rand+10].value = 3;
             console.log(rand+10);
             console.log(td_pc[rand+10].value);
 
-            td_pc[rand+20].style.background = 'brown';
+           // td_pc[rand+20].style.background = 'brown';
             td_pc[rand+20].value = 3;
             console.log(rand+20);
             console.log(td_pc[rand+20].value);
 
             if(rand - 10 >= 0){
-                td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
+               // td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 10].value = 5;
             }
             if(rand + 30 < 100){
-                td_pc[rand + 30].style.background = 'rgba(192, 192, 192, 0.8)';
+              //  td_pc[rand + 30].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 30].value = 5;
             }
             if(rand - 11 >= 0 && (rand - 11 - 9) % 10 !== 0){
-                td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
+              //  td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 11].value = 5;
             }
             if(rand - 9 >= 0 && (rand - 9) % 10 !== 0){
-                td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
+              //  td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 9].value = 5;
             }
             if(rand - 1 >= 0 && (rand - 1 - 9) % 10 !== 0){
-                td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
+              //  td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 1].value = 5;
             }
             if(rand + 1 < 100 && (rand + 1) % 10 !== 0){
-                td_pc[rand + 1].style.background = 'rgba(192, 192, 192, 0.8)';
+             //   td_pc[rand + 1].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 1].value = 5;
             }
             if(rand + 9 < 100 && (rand + 9 - 9) % 10 !== 0){
-                td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
+             //   td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 9].value = 5;
             }
             if(rand + 11 < 100 && (rand + 11) % 10 !== 0){
-                td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
+             //   td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 11].value = 5;
             }
             if(rand + 19 < 100 && (rand + 19 - 9) % 10 !== 0){
-                td_pc[rand + 19].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 19].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 19].value = 5;
             }
             if(rand + 21 < 100 && (rand + 21) % 10 !== 0){
-                td_pc[rand + 21].style.background = 'rgba(192, 192, 192, 0.8)';
+             //   td_pc[rand + 21].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 21].value = 5;
             }
             if(rand + 29 < 100 && (rand + 29 - 9) % 10 !== 0){
-                td_pc[rand + 29].style.background = 'rgba(192, 192, 192, 0.8)';
+             //   td_pc[rand + 29].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 29].value = 5;
             }
             if(rand + 31 < 100 && (rand + 31) % 10 !== 0){
-                td_pc[rand + 31].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 31].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 31].value = 5;
             }
         }
@@ -374,67 +374,67 @@ for(let i = 0; i < 2; i++){
             td_pc[rand+1].value !== 1 && td_pc[rand+1].value !== 2 && td_pc[rand+1].value !== 3 && td_pc[rand+1].value !== 4 && td_pc[rand+1].value !== 5 &&
             td_pc[rand+2].value !== 1 && td_pc[rand+2].value !== 2 && td_pc[rand+2].value !== 3 && td_pc[rand+2].value !== 4 && td_pc[rand+2].value !== 5){
 
-            td_pc[rand].style.background = 'brown';
+           // td_pc[rand].style.background = 'brown';
             td_pc[rand].value = 3;
             console.log(rand);
             console.log(td_pc[rand].value);
 
-            td_pc[rand+1].style.background = 'brown';
+           // td_pc[rand+1].style.background = 'brown';
             td_pc[rand+1].value = 3;
             console.log(rand+1);
             console.log(td_pc[rand+1].value);
 
-            td_pc[rand+2].style.background = 'brown';
+           // td_pc[rand+2].style.background = 'brown';
             td_pc[rand+2].value = 3;
             console.log(rand+2);
             console.log(td_pc[rand+2].value);
 
             if(rand - 1 >= 0 && (rand - 1 - 9) % 10 !== 0){
-                td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 1].value = 5;
             }
             if(rand - 11 >= 0 && (rand - 11 - 9) % 10 !== 0){
-                td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 11].value = 5;
             }
             if(rand + 9 < 100 && (rand + 9 - 9) % 10 !== 0){
-                td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 9].value = 5;
             }
             if(rand - 10 >= 0){
-                td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
+             //   td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 10].value = 5;
             }
             if(rand + 10 < 100){
-                td_pc[rand + 10].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 10].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 10].value = 5;
             }
             if(rand - 9 >= 0){
-                td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 9].value = 5;
             }
             if(rand + 11 < 100){
-                td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 11].value = 5;
             }
             if(rand + 3 < 100 && (rand + 3) % 10 !== 0){
-                td_pc[rand + 3].style.background = 'rgba(192, 192, 192, 0.8)';
+             //   td_pc[rand + 3].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 3].value = 5;
             }
             if(rand - 8 >= 0 && (rand - 8) % 10 !== 0){
-                td_pc[rand - 8].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand - 8].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 8].value = 5;
             }
             if(rand + 12 < 100 && (rand + 12) % 10 !== 0){
-                td_pc[rand + 12].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 12].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 12].value = 5;
             }
             if(rand - 7 >= 0 && (rand - 7) % 10 !== 0){
-                td_pc[rand - 7].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand - 7].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 7].value = 5;
             }
             if(rand + 13 < 100 && (rand + 13) % 10 !== 0){
-                td_pc[rand + 13].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 13].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 13].value = 5;
             }
 
@@ -455,54 +455,54 @@ for(let i = 0; i < 3; i++){
         if(td_pc[rand].value !== 1 && td_pc[rand].value !== 2 && td_pc[rand].value !== 3 && td_pc[rand].value !== 4 && td_pc[rand].value !== 5 &&
             td_pc[rand+10].value !== 1 && td_pc[rand+10].value !== 2 && td_pc[rand+10].value !== 3 && td_pc[rand+10].value !== 4 && td_pc[rand+10].value !== 5){
 
-            td_pc[rand].style.background = 'brown';
+           // td_pc[rand].style.background = 'brown';
             td_pc[rand].value = 2;
             console.log(rand);
             console.log(td_pc[rand].value);
 
-            td_pc[rand+10].style.background = 'brown';
+           // td_pc[rand+10].style.background = 'brown';
             td_pc[rand+10].value = 2;
             console.log(rand+10);
             console.log(td_pc[rand+10].value);
 
             if(rand - 10 >= 0){
-                td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 10].value = 5;
             }
             if(rand + 20 < 100){
-                td_pc[rand + 20].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 20].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 20].value = 5;
             }
             if(rand - 11 >= 0 && (rand - 11 - 9) % 10 !== 0){
-                td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 11].value = 5;
             }
             if(rand - 9 >= 0 && (rand - 9) % 10 !== 0){
-                td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
+             //   td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 9].value = 5;
             }
             if(rand - 1 >= 0 && (rand - 1 - 9) % 10 !== 0){
-                td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 1].value = 5;
             }
             if(rand + 1 < 100 && (rand + 1) % 10 !== 0){
-                td_pc[rand + 1].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 1].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 1].value = 5;
             }
             if(rand + 9 < 100 && (rand + 9 - 9) % 10 !== 0){
-                td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 9].value = 5;
             }
             if(rand + 11 < 100 && (rand + 11) % 10 !== 0){
-                td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 11].value = 5;
             }
             if(rand + 19 < 100 && (rand + 19 - 9) % 10 !== 0){
-                td_pc[rand + 19].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 19].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 19].value = 5;
             }
             if(rand + 21 < 100 && (rand + 21) % 10 !== 0){
-                td_pc[rand + 21].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 21].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 21].value = 5;
             }
         }
@@ -526,54 +526,54 @@ for(let i = 0; i < 3; i++){
         if (td_pc[rand].value !== 1 && td_pc[rand].value !== 2 && td_pc[rand].value !== 3 && td_pc[rand].value !== 4 && td_pc[rand].value !== 5 &&
             td_pc[rand + 1].value !== 1 && td_pc[rand + 1].value !== 2 && td_pc[rand + 1].value !== 3 && td_pc[rand + 1].value !== 4 && td_pc[rand + 1].value !== 5) {
 
-            td_pc[rand].style.background = 'brown';
+           // td_pc[rand].style.background = 'brown';
             td_pc[rand].value = 2;
             console.log(rand);
             console.log(td_pc[rand].value);
 
-            td_pc[rand+1].style.background = 'brown';
+           // td_pc[rand+1].style.background = 'brown';
             td_pc[rand+1].value = 2;
             console.log(rand+1);
             console.log(td_pc[rand+1].value);
 
             if(rand - 1 >= 0 && (rand - 1 - 9) % 10 !== 0){
-                td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
+             //   td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 1].value = 5;
             }
             if(rand - 11 >= 0 && (rand - 11 - 9) % 10 !== 0){
-                td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
+             //   td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 11].value = 5;
             }
             if(rand + 9 < 100 && (rand + 9 - 9) % 10 !== 0){
-                td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 9].value = 5;
             }
             if(rand - 10 >= 0){
-                td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
+             //   td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 10].value = 5;
             }
             if(rand + 10 < 100){
-                td_pc[rand + 10].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 10].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 10].value = 5;
             }
             if(rand - 9 >= 0){
-                td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 9].value = 5;
             }
             if(rand + 11 < 100){
-                td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
+             //   td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 11].value = 5;
             }
             if(rand + 2 < 100 && (rand + 2) % 10 !== 0){
-                td_pc[rand + 2].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 2].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 2].value = 5;
             }
             if(rand - 8 >= 0 && (rand - 8) % 10 !== 0){
-                td_pc[rand - 8].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand - 8].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand - 8].value = 5;
             }
             if(rand + 12 < 100 && (rand + 12) % 10 !== 0){
-                td_pc[rand + 12].style.background = 'rgba(192, 192, 192, 0.8)';
+            //    td_pc[rand + 12].style.background = 'rgba(192, 192, 192, 0.8)';
                 td_pc[rand + 12].value = 5;
             }
         }
@@ -588,41 +588,41 @@ for(let i = 0; i < 4; i++){
     let rand = Math.floor(Math.random()*100);
     if(td_pc[rand].value !== 1 && td_pc[rand].value !== 2 && td_pc[rand].value !== 3 && td_pc[rand].value !== 4 && td_pc[rand].value !== 5 ){
 
-        td_pc[rand].style.background = 'brown';
+       // td_pc[rand].style.background = 'brown';
         td_pc[rand].value = 1;
         console.log(rand);
         console.log(td_pc[rand].value);
 
         if(rand + 1 < 100 && (rand + 1) % 10 !== 0){
-            td_pc[rand + 1].style.background = 'rgba(192, 192, 192, 0.8)';
+         //   td_pc[rand + 1].style.background = 'rgba(192, 192, 192, 0.8)';
             td_pc[rand + 1].value = 5;
         }
         if(rand - 1 >= 0 && (rand - 1 - 9) % 10 !== 0 ){
-            td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
+         //   td_pc[rand - 1].style.background = 'rgba(192, 192, 192, 0.8)';
             td_pc[rand - 1].value = 5;
         }
         if(rand + 10 < 100){
-            td_pc[rand + 10].style.background = 'rgba(192, 192, 192, 0.8)';
+        //   td_pc[rand + 10].style.background = 'rgba(192, 192, 192, 0.8)';
             td_pc[rand + 10].value = 5;
         }
         if(rand - 10 >= 0){
-            td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
+         //   td_pc[rand - 10].style.background = 'rgba(192, 192, 192, 0.8)';
             td_pc[rand - 10].value = 5;
         }
         if(rand - 11 >= 0 && (rand - 11 - 9) % 10 !== 0){
-            td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
+         //   td_pc[rand - 11].style.background = 'rgba(192, 192, 192, 0.8)';
             td_pc[rand - 11].value = 5;
         }
         if(rand + 11 < 100 && (rand + 11) % 10 !== 0){
-            td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
+        //    td_pc[rand + 11].style.background = 'rgba(192, 192, 192, 0.8)';
             td_pc[rand + 11].value = 5;
         }
         if(rand + 9 < 100 && (rand + 9 - 9) % 10 !== 0){
-            td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
+         //   td_pc[rand + 9].style.background = 'rgba(192, 192, 192, 0.8)';
             td_pc[rand + 9].value = 5;
         }
         if(rand - 9 >= 0 && (rand - 9) % 10 !== 0){
-            td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
+        //    td_pc[rand - 9].style.background = 'rgba(192, 192, 192, 0.8)';
             td_pc[rand - 9].value = 5;
         }
     }
@@ -4031,6 +4031,9 @@ let pcWin = function(n){
         alert('Вы проиграли!');
     }
 };
+let slip = function(n){
+    td_you[n].style.background = 'rgb(51, 10, 0, 0.8)';
+};
 
 let shotShipPC = 0;
 let shotShipYou = 0;
@@ -4049,7 +4052,7 @@ start.onclick = function(){
     }
     else{
         game = true;
-        alert('ok');
+        alert('В атаку!');
         return game;
     }
 
@@ -4937,6 +4940,233 @@ for(let i = 0; i < td_pc.length; i++){
                         }
                     }
 
+                    if(arr3.length === 1){
+                        trandShot = false;
+                        let randCross;
+                        let trandCross = true;
+
+                        while(trandCross){
+                            trandCross = false;
+                            randCross = Math.floor(Math.random()*4);
+                            randShot = arr3[0] + cross[randCross];
+                            if( (cross[randCross] === 1 && randShot < 100 && randShot % 10 === 0) ||
+                                (cross[randCross] === 1 && randShot > 99) ||
+                                (cross[randCross] === -1 && randShot >= 0 && (randShot - 9) % 10 === 0) ||
+                                (cross[randCross] === -1 && randShot < 0) ||
+                                (cross[randCross] === 10 && randShot > 99) ||
+                                (cross[randCross] === -10 && randShot < 0) ||
+                                td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
+                                trandCross = true;
+                            }
+                        }
+                    }
+
+                    if(arr3.length === 2){
+                        trandShot = false;
+
+                        arr3 = arr3.sort();
+                        if(arr3[1] - arr3[0] === 1){
+                            let randLineX;
+                            let trandLineX = true;
+
+                            while (trandLineX) {
+                                trandLineX = false;
+                                randLineX = Math.floor(Math.random()*2);
+                                if(lineX[randLineX] === 1){
+                                    randShot = arr3[1] + lineX[randLineX];
+
+                                    if((randShot < 100 && randShot % 10 === 0) ||
+                                        randShot > 99 ||
+                                        td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
+                                        trandLineX = true;
+                                    }
+
+                                }
+                                if(lineX[randLineX] === -1){
+                                    randShot = arr3[0] + lineX[randLineX];
+
+                                    if((randShot >= 0 && (randShot - 9) % 10 === 0) ||
+                                        randShot < 0 ||
+                                        td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
+                                        trandLineX = true;
+                                    }
+                                }
+                            }
+
+                        }
+                        if(arr3[1] - arr3[0] === 10){
+                            let randLineY;
+                            let trandLineY = true;
+
+                            while (trandLineY) {
+                                trandLineY = false;
+                                randLineY = Math.floor(Math.random()*2);
+
+                                if(lineY[randLineY] === 10){
+                                    randShot = arr3[1] + lineY[randLineY];
+
+                                    if(randShot > 99 ||
+                                        td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
+                                        trandLineY = true;
+                                    }
+
+                                }
+                                if(lineY[randLineY] === -10){
+                                    randShot = arr3[0] + lineY[randLineY];
+
+                                    if(randShot < 0 ||
+                                        td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
+                                        trandLineY = true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    if(arr4.length === 1){
+                        trandShot = false;
+                        let randCross;
+                        let trandCross = true;
+
+                        while(trandCross){
+                            trandCross = false;
+                            randCross = Math.floor(Math.random()*4);
+                            randShot = arr4[0] + cross[randCross];
+                            if( (cross[randCross] === 1 && randShot < 100 && randShot % 10 === 0) ||
+                                (cross[randCross] === 1 && randShot > 99) ||
+                                (cross[randCross] === -1 && randShot >= 0 && (randShot - 9) % 10 === 0) ||
+                                (cross[randCross] === -1 && randShot < 0) ||
+                                (cross[randCross] === 10 && randShot > 99) ||
+                                (cross[randCross] === -10 && randShot < 0) ||
+                                td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
+                                trandCross = true;
+                            }
+                        }
+                    }
+
+                    if(arr4.length === 2){
+                        trandShot = false;
+
+                        arr4 = arr4.sort();
+                        if(arr4[1] - arr4[0] === 1){
+                            let randLineX;
+                            let trandLineX = true;
+
+                            while (trandLineX) {
+                                trandLineX = false;
+                                randLineX = Math.floor(Math.random()*2);
+                                if(lineX[randLineX] === 1){
+                                    randShot = arr4[1] + lineX[randLineX];
+
+                                    if((randShot < 100 && randShot % 10 === 0) ||
+                                        randShot > 99 ||
+                                        td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
+                                        trandLineX = true;
+                                    }
+
+                                }
+                                if(lineX[randLineX] === -1){
+                                    randShot = arr4[0] + lineX[randLineX];
+
+                                    if((randShot >= 0 && (randShot - 9) % 10 === 0) ||
+                                        randShot < 0 ||
+                                        td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
+                                        trandLineX = true;
+                                    }
+                                }
+                            }
+                        }
+                        if(arr4[1] - arr4[0] === 10){
+                            let randLineY;
+                            let trandLineY = true;
+
+                            while (trandLineY) {
+                                trandLineY = false;
+                                randLineY = Math.floor(Math.random()*2);
+
+                                if(lineY[randLineY] === 10){
+                                    randShot = arr4[1] + lineY[randLineY];
+
+                                    if(randShot > 99 ||
+                                        td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
+                                        trandLineY = true;
+                                    }
+
+                                }
+                                if(lineY[randLineY] === -10){
+                                    randShot = arr4[0] + lineY[randLineY];
+
+                                    if(randShot < 0 ||
+                                        td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
+                                        trandLineY = true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    if(arr4.length === 3){
+                        trandShot = false;
+
+                        arr4 = arr4.sort();
+                        if(arr4[1] - arr4[0] === 1){
+                            let randLineX;
+                            let trandLineX = true;
+
+                            while (trandLineX) {
+                                trandLineX = false;
+                                randLineX = Math.floor(Math.random()*2);
+                                if(lineX[randLineX] === 1){
+                                    randShot = arr4[2] + lineX[randLineX];
+
+                                    if((randShot < 100 && randShot % 10 === 0) ||
+                                        randShot > 99 ||
+                                        td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
+                                        trandLineX = true;
+                                    }
+
+                                }
+                                if(lineX[randLineX] === -1){
+                                    randShot = arr4[0] + lineX[randLineX];
+
+                                    if((randShot >= 0 && (randShot - 9) % 10 === 0) ||
+                                        randShot < 0 ||
+                                        td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
+                                        trandLineX = true;
+                                    }
+                                }
+                            }
+
+                        }
+                        if(arr4[1] - arr4[0] === 10){
+                            let randLineY;
+                            let trandLineY = true;
+
+                            while (trandLineY) {
+                                trandLineY = false;
+                                randLineY = Math.floor(Math.random()*2);
+
+                                if(lineY[randLineY] === 10){
+                                    randShot = arr4[2] + lineY[randLineY];
+
+                                    if(randShot > 99 ||
+                                        td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
+                                        trandLineY = true;
+                                    }
+
+                                }
+                                if(lineY[randLineY] === -10){
+                                    randShot = arr4[0] + lineY[randLineY];
+
+                                    if(randShot < 0 ||
+                                        td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
+                                        trandLineY = true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     while (trandShot) {
                         randShot = Math.floor(Math.random()*100);
                         trandShot = false;
@@ -4997,40 +5227,6 @@ for(let i = 0; i < td_pc.length; i++){
                         shotShipPC++;
                         pcWin(shotShipPC);
                         console.log(arr2.length);
-
-                        /*if(arr2.length === 1){
-                            let _trandCross = true;
-                            let _randShot;
-
-                            while (_trandCross){
-                                _trandCross = false;
-                                let _randCross = Math.floor(Math.random()*4);
-                                _randShot = arr2[0] + cross[_randCross];
-                                if( (cross[_randCross] === 1 && _randShot < 100 && _randShot % 10 === 0) ||
-                                    (cross[_randCross] === 1 && _randShot > 99) ||
-                                    (cross[_randCross] === -1 && _randShot >= 0 && (_randShot - 9) % 10 === 0) ||
-                                    (cross[_randCross] === -1 && _randShot < 0) ||
-                                    (cross[_randCross] === 10 && _randShot > 99) ||
-                                    (cross[_randCross] === -10 && _randShot < 0) ||
-                                    td_you[_randShot].value === 6 || td_you[_randShot].value === 7 || td_you[_randShot].value === 8 || td_you[_randShot].value === 9 || td_you[_randShot].value === 10){
-                                    _trandCross = true;
-                                }
-                            }
-
-                            if(td_you[_randShot].value === 2){
-                                td_you[_randShot].value = 8;
-                                shotShipColorPC(_randShot);
-                                arr2.push(_randShot);
-
-                                shotShipPC++;
-                                pcWin(shotShipPC);
-                            }
-                            else if(td_you[_randShot].value === 0){
-                                td_you[_randShot].value = 6;
-                                shotColorPC(_randShot);
-                            }
-                        }
-                        */
 
                         if(arr2.length === 2){
                             arr2 = arr2.sort();
@@ -5132,22 +5328,267 @@ for(let i = 0; i < td_pc.length; i++){
                     if(td_you[randShot].value === 3){
                         td_you[randShot].value = 9;
                         shotShipColorPC(randShot);
+                        arr3.push(randShot);
 
                         shotShipPC++;
                         pcWin(shotShipPC);
+                        console.log(arr3.length);
+
+                        if(arr3.length === 3){
+                            arr3 = arr3.sort();
+
+                            if(arr3[1] - arr3[0] === 1){
+                                if(arr3[0] - 1 >= 0 && (arr3[0] - 1 - 9) % 10 !== 0){
+                                    shotColorPC(arr3[0] - 1);
+                                    td_you[arr3[0] - 1].value = 6;
+                                }
+                                if(arr3[0] - 11 >= 0 && (arr3[0] - 11 - 9) % 10 !== 0){
+                                    shotColorPC(arr3[0] - 11);
+                                    td_you[arr3[0] - 11].value = 6;
+                                }
+                                if(arr3[0] + 9 < 100 && (arr3[0] + 9 - 9) % 10 !== 0){
+                                    shotColorPC(arr3[0] + 9);
+                                    td_you[arr3[0] + 9].value = 6;
+                                }
+                                if(arr3[0] - 10 >= 0){
+                                    shotColorPC(arr3[0] - 10);
+                                    td_you[arr3[0] - 10].value = 6;
+                                }
+                                if(arr3[0] + 10 < 100){
+                                    shotColorPC(arr3[0] + 10);
+                                    td_you[arr3[0] + 10].value = 6;
+                                }
+                                if(arr3[0] - 9 >= 0){
+                                    shotColorPC(arr3[0] - 9);
+                                    td_you[arr3[0] - 9].value = 6;
+                                }
+                                if(arr3[0] + 11 < 100){
+                                    shotColorPC(arr3[0] + 11);
+                                    td_you[arr3[0] + 11].value = 6;
+                                }
+                                if(arr3[0] + 3 < 100 && (arr3[0] + 3) % 10 !== 0){
+                                    shotColorPC(arr3[0] + 3);
+                                    td_you[arr3[0] + 3].value = 6;
+                                }
+                                if(arr3[0] - 8 >= 0 && (arr3[0] - 8) % 10 !== 0){
+                                    shotColorPC(arr3[0] - 8);
+                                    td_you[arr3[0] - 8].value = 6;
+                                }
+                                if(arr3[0] + 12 < 100 && (arr3[0] + 12) % 10 !== 0){
+                                    shotColorPC(arr3[0] + 12);
+                                    td_you[arr3[0] + 12].value = 6;
+                                }
+                                if(arr3[0] - 7 >= 0 && (arr3[0] - 7) % 10 !== 0){
+                                    shotColorPC(arr3[0] - 7);
+                                    td_you[arr3[0] - 7].value = 6;
+                                }
+                                if(arr3[0] + 13 < 100 && (arr3[0] + 13) % 10 !== 0){
+                                    shotColorPC(arr3[0] + 13);
+                                    td_you[arr3[0] + 13].value = 6;
+                                }
+                            }
+                            else if(arr3[1] - arr3[0] === 10){
+                                if(arr3[0] - 10 >= 0){
+                                    shotColorPC(arr3[0] - 10);
+                                    td_you[arr3[0] - 10].value = 6;
+                                }
+                                if(arr3[0] + 30 < 100){
+                                    shotColorPC(arr3[0] + 30);
+                                    td_you[arr3[0] + 30].value = 6;
+                                }
+                                if(arr3[0] - 11 >= 0 && (arr3[0] - 11 - 9) % 10 !== 0){
+                                    shotColorPC(arr3[0] - 11);
+                                    td_you[arr3[0] - 11].value = 6;
+                                }
+                                if(arr3[0] - 9 >= 0 && (arr3[0] - 9) % 10 !== 0){
+                                    shotColorPC(arr3[0] - 9);
+                                    td_you[arr3[0] - 9].value = 6;
+                                }
+                                if(arr3[0] - 1 >= 0 && (arr3[0] - 1 - 9) % 10 !== 0){
+                                    shotColorPC(arr3[0] - 1);
+                                    td_you[arr3[0] - 1].value = 6;
+                                }
+                                if(arr3[0] + 1 < 100 && (arr3[0] + 1) % 10 !== 0){
+                                    shotColorPC(arr3[0] + 1);
+                                    td_you[arr3[0] + 1].value = 6;
+                                }
+                                if(arr3[0] + 9 < 100 && (arr3[0] + 9 - 9) % 10 !== 0){
+                                    shotColorPC(arr3[0] + 9);
+                                    td_you[arr3[0] + 9].value = 6;
+                                }
+                                if(arr3[0] + 11 < 100 && (arr3[0] + 11) % 10 !== 0){
+                                    shotColorPC(arr3[0] + 11);
+                                    td_you[arr3[0] + 11].value = 6;
+                                }
+                                if(arr3[0] + 19 < 100 && (arr3[0] + 19 - 9) % 10 !== 0){
+                                    shotColorPC(arr3[0] + 19);
+                                    td_you[arr3[0] + 19].value = 6;
+                                }
+                                if(arr3[0] + 21 < 100 && (arr3[0] + 21) % 10 !== 0){
+                                    shotColorPC(arr3[0] + 21);
+                                    td_you[arr3[0] + 21].value = 6;
+                                }
+                                if(arr3[0] + 29 < 100 && (arr3[0] + 29 - 9) % 10 !== 0){
+                                    shotColorPC(arr3[0] + 29);
+                                    td_you[arr3[0] + 29].value = 6;
+                                }
+                                if(arr3[0] + 31 < 100 && (arr3[0] + 31) % 10 !== 0){
+                                    shotColorPC(arr3[0] + 31);
+                                    td_you[arr3[0] + 31].value = 6;
+                                }
+                            }
+                            arr3 = [];
+                            console.log(arr3);
+                            console.log('crash ship 3');
+                        }
+
+                        if(shotShipPC < 20){
+                            setTimeout(shotPC, 1000);
+                        }
                     }
 
                     if(td_you[randShot].value === 4){
                         td_you[randShot].value = 10;
                         shotShipColorPC(randShot);
+                        arr4.push(randShot);
 
                         shotShipPC++;
                         pcWin(shotShipPC);
+                        console.log(arr4.length);
+
+                        if(arr4.length === 4){
+                            arr4 = arr4.sort();
+
+                            if(arr4[1] - arr4[0] === 1){
+                                if(arr4[0] - 1 >= 0 && (arr4[0] - 1 - 9) % 10 !== 0){
+                                    shotColorPC(arr4[0] - 1);
+                                    td_you[arr4[0] - 1].value = 6;
+                                }
+                                if(arr4[0] - 11 >= 0 && (arr4[0] - 11 - 9) % 10 !== 0){
+                                    shotColorPC(arr4[0] - 11);
+                                    td_you[arr4[0] - 11].value = 6;
+                                }
+                                if(arr4[0] + 9 < 100 && (arr4[0] + 9 - 9) % 10 !== 0){
+                                    shotColorPC(arr4[0] + 9);
+                                    td_you[arr4[0] + 9].value = 6;
+                                }
+                                if(arr4[0] - 10 >= 0){
+                                    shotColorPC(arr4[0] - 10);
+                                    td_you[arr4[0] - 10].value = 6;
+                                }
+                                if(arr4[0] + 10 < 100){
+                                    shotColorPC(arr4[0] + 10);
+                                    td_you[arr4[0] + 10].value = 6;
+                                }
+                                if(arr4[0] - 9 >= 0){
+                                    shotColorPC(arr4[0] - 9);
+                                    td_you[arr4[0] - 9].value = 6;
+                                }
+                                if(arr4[0] + 11 < 100){
+                                    shotColorPC(arr4[0] + 11);
+                                    td_you[arr4[0] + 11].value = 6;
+                                }
+                                if(arr4[0] + 4 < 100 && (arr4[0] + 4) % 10 !== 0){
+                                    shotColorPC(arr4[0] + 4);
+                                    td_you[arr4[0] + 4].value = 6;
+                                }
+                                if(arr4[0] - 8 >= 0 && (arr4[0] - 8) % 10 !== 0){
+                                    shotColorPC(arr4[0] - 8);
+                                    td_you[arr4[0] - 8].value = 6;
+                                }
+                                if(arr4[0] + 12 < 100 && (arr4[0] + 12) % 10 !== 0){
+                                    shotColorPC(arr4[0] + 12);
+                                    td_you[arr4[0] + 12].value = 6;
+                                }
+                                if(arr4[0] - 7 >= 0 && (arr4[0] - 7) % 10 !== 0){
+                                    shotColorPC(arr4[0] - 7);
+                                    td_you[arr4[0] - 7].value = 6;
+                                }
+                                if(arr4[0] + 13 < 100 && (arr4[0] + 13) % 10 !== 0){
+                                    shotColorPC(arr4[0] + 13);
+                                    td_you[arr4[0] + 13].value = 6;
+                                }
+                                if(arr4[0] + 14 < 100 && (arr4[0] + 14) % 10 !== 0){
+                                    shotColorPC(arr4[0] + 14);
+                                    td_you[arr4[0] + 14].value = 6;
+                                }
+                                if(arr4[0] - 6 >= 0 && (arr4[0] - 6) % 10 !== 0){
+                                    shotColorPC(arr4[0] - 6);
+                                    td_you[arr4[0] - 6].value = 6;
+                                }
+                            }
+                            else if(arr4[1] - arr4[0] === 10){
+                                if(arr4[0] - 10 >= 0){
+                                    shotColorPC(arr4[0] - 10);
+                                    td_you[arr4[0] - 10].value = 6;
+                                }
+                                if(arr4[0] + 40 < 100){
+                                    shotColorPC(arr4[0] + 40);
+                                    td_you[arr4[0] + 40].value = 6;
+                                }
+                                if(arr4[0] - 11 >= 0 && (arr4[0] - 11 - 9) % 10 !== 0){
+                                    shotColorPC(arr4[0] - 11);
+                                    td_you[arr4[0] - 11].value = 6;
+                                }
+                                if(arr4[0] - 9 >= 0 && (arr4[0] - 9) % 10 !== 0){
+                                    shotColorPC(arr4[0] - 9);
+                                    td_you[arr4[0] - 9].value = 6;
+                                }
+                                if(arr4[0] - 1 >= 0 && (arr4[0] - 1 - 9) % 10 !== 0){
+                                    shotColorPC(arr4[0] - 1);
+                                    td_you[arr4[0] - 1].value = 6;
+                                }
+                                if(arr4[0] + 1 < 100 && (arr4[0] + 1) % 10 !== 0){
+                                    shotColorPC(arr4[0] + 1);
+                                    td_you[arr4[0] + 1].value = 6;
+                                }
+                                if(arr4[0] + 9 < 100 && (arr4[0] + 9 - 9) % 10 !== 0){
+                                    shotColorPC(arr4[0] + 9);
+                                    td_you[arr4[0] + 9].value = 6;
+                                }
+                                if(arr4[0] + 11 < 100 && (arr4[0] + 11) % 10 !== 0){
+                                    shotColorPC(arr4[0] + 11);
+                                    td_you[arr4[0] + 11].value = 6;
+                                }
+                                if(arr4[0] + 19 < 100 && (arr4[0] + 19 - 9) % 10 !== 0){
+                                    shotColorPC(arr4[0] + 19);
+                                    td_you[arr4[0] + 19].value = 6;
+                                }
+                                if(arr4[0] + 21 < 100 && (arr4[0] + 21) % 10 !== 0){
+                                    shotColorPC(arr4[0] + 21);
+                                    td_you[arr4[0] + 21].value = 6;
+                                }
+                                if(arr4[0] + 29 < 100 && (arr4[0] + 29 - 9) % 10 !== 0){
+                                    shotColorPC(arr4[0] + 29);
+                                    td_you[arr4[0] + 29].value = 6;
+                                }
+                                if(arr4[0] + 31 < 100 && (arr4[0] + 31) % 10 !== 0){
+                                    shotColorPC(arr4[0] + 31);
+                                    td_you[arr4[0] + 31].value = 6;
+                                }
+                                if(arr4[0] + 39 < 100 && (arr4[0] + 39 - 9) % 10 !== 0){
+                                    shotColorPC(arr4[0] + 39);
+                                    td_you[arr4[0] + 39].value = 6;
+                                }
+                                if(arr4[0] + 41 < 100 && (arr4[0] + 41) % 10 !== 0){
+                                    shotColorPC(arr4[0] + 41);
+                                    td_you[arr4[0] + 41].value = 6;
+                                }
+                            }
+                            arr4 = [];
+                            console.log(arr4);
+                            console.log('crash ship 4');
+                        }
+
+                        if(shotShipPC < 20){
+                            setTimeout(shotPC, 1000);
+                        }
                     }
 
                     if(td_you[randShot].value === 0){
-                        shotColorPC(randShot);
                         td_you[randShot].value = 6;
+
+                        shotColorPC(randShot);
                     }
                 };
 
