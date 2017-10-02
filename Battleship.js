@@ -4031,8 +4031,21 @@ let pcWin = function(n){
         alert('Вы проиграли!');
     }
 };
-let slip = function(n){
+let slip = function(n){ //время выстрела ????
     td_you[n].style.background = 'rgb(51, 10, 0, 0.8)';
+};
+let sort = function(m){
+    let p;
+    for(let i = 1; i < m.length; i++){
+        for(let j = i; j > 0; j--){
+            if(m[j-1] > m[j]){
+                p = m[j];
+                m[j] = m[j-1];
+                m[j-1] = p;
+            }
+        }
+    }
+    return m;
 };
 
 let shotShipPC = 0;
@@ -4919,6 +4932,10 @@ for(let i = 0; i < td_pc.length; i++){
                     let randShot;
                     let trandShot = true;
 
+                    sort(arr2);
+                    sort(arr3);
+                    sort(arr4);
+
                     if(arr2.length === 1){
                         trandShot = false;
                         let randCross;
@@ -4964,7 +4981,11 @@ for(let i = 0; i < td_pc.length; i++){
                     if(arr3.length === 2){
                         trandShot = false;
 
-                        arr3 = arr3.sort();
+                        sort(arr3);
+
+                        console.log(trandShot);
+                        console.log(arr3);
+
                         if(arr3[1] - arr3[0] === 1){
                             let randLineX;
                             let trandLineX = true;
@@ -5012,14 +5033,16 @@ for(let i = 0; i < td_pc.length; i++){
 
                                 }
                                 if(lineY[randLineY] === -10){
-                                    randShot = arr3[0] + lineY[randLineY];
+                                    randShot = arr3[0] - 10;
 
                                     if(randShot < 0 ||
+                                        td_you[randShot].value === undefined ||
                                         td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
                                         trandLineY = true;
                                     }
                                 }
                             }
+                            console.log(randShot);
                         }
                     }
 
@@ -5047,7 +5070,10 @@ for(let i = 0; i < td_pc.length; i++){
                     if(arr4.length === 2){
                         trandShot = false;
 
-                        arr4 = arr4.sort();
+                        sort(arr4);
+                        console.log(trandShot);
+                        console.log(arr4);
+
                         if(arr4[1] - arr4[0] === 1){
                             let randLineX;
                             let trandLineX = true;
@@ -5094,21 +5120,26 @@ for(let i = 0; i < td_pc.length; i++){
 
                                 }
                                 if(lineY[randLineY] === -10){
-                                    randShot = arr4[0] + lineY[randLineY];
+                                    randShot = arr4[0] - 10;
 
                                     if(randShot < 0 ||
+                                        td_you[randShot].value === undefined ||
                                         td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
                                         trandLineY = true;
                                     }
                                 }
                             }
+                            console.log(randShot);
                         }
                     }
 
                     if(arr4.length === 3){
                         trandShot = false;
 
-                        arr4 = arr4.sort();
+                        sort(arr4);
+                        console.log(trandShot);
+                        console.log(arr4);
+
                         if(arr4[1] - arr4[0] === 1){
                             let randLineX;
                             let trandLineX = true;
@@ -5156,14 +5187,16 @@ for(let i = 0; i < td_pc.length; i++){
 
                                 }
                                 if(lineY[randLineY] === -10){
-                                    randShot = arr4[0] + lineY[randLineY];
+                                    randShot = arr4[0] - 10;
 
                                     if(randShot < 0 ||
+                                        td_you[randShot].value === undefined ||
                                         td_you[randShot].value === 6 || td_you[randShot].value === 7 || td_you[randShot].value === 8 || td_you[randShot].value === 9 || td_you[randShot].value === 10){
                                         trandLineY = true;
                                     }
                                 }
                             }
+                            console.log(randShot);
                         }
                     }
 
@@ -5223,13 +5256,14 @@ for(let i = 0; i < td_pc.length; i++){
                         td_you[randShot].value = 8;
                         shotShipColorPC(randShot);
                         arr2.push(randShot);
+                        sort(arr2);
 
                         shotShipPC++;
                         pcWin(shotShipPC);
                         console.log(arr2.length);
 
                         if(arr2.length === 2){
-                            arr2 = arr2.sort();
+                            sort(arr2);
                             if(arr2[1] - arr2[0] === 1){
                                 if(arr2[0] - 1 >= 0 && (arr2[0] - 1 - 9) % 10 !== 0){
                                     shotColorPC(arr2[0] - 1);
@@ -5329,13 +5363,14 @@ for(let i = 0; i < td_pc.length; i++){
                         td_you[randShot].value = 9;
                         shotShipColorPC(randShot);
                         arr3.push(randShot);
+                        sort(arr3);
 
                         shotShipPC++;
                         pcWin(shotShipPC);
                         console.log(arr3.length);
 
                         if(arr3.length === 3){
-                            arr3 = arr3.sort();
+                            sort(arr3);
 
                             if(arr3[1] - arr3[0] === 1){
                                 if(arr3[0] - 1 >= 0 && (arr3[0] - 1 - 9) % 10 !== 0){
@@ -5451,13 +5486,15 @@ for(let i = 0; i < td_pc.length; i++){
                         td_you[randShot].value = 10;
                         shotShipColorPC(randShot);
                         arr4.push(randShot);
+                        sort(arr4);
 
                         shotShipPC++;
                         pcWin(shotShipPC);
                         console.log(arr4.length);
 
                         if(arr4.length === 4){
-                            arr4 = arr4.sort();
+                            sort(arr4);
+                            console.log(arr4);
 
                             if(arr4[1] - arr4[0] === 1){
                                 if(arr4[0] - 1 >= 0 && (arr4[0] - 1 - 9) % 10 !== 0){
