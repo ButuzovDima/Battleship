@@ -1,5 +1,5 @@
 body{
-    background-image: url("img/1.jpg");
+    background-image: url("img/bs2.jpg");
     background-size: cover;
     font-family: Verdana;
 }
@@ -54,7 +54,7 @@ li.head_li a i{
     width: 1200px;
     height: 60px;
     margin: 0 0 20px 60px;
-    background:  rgba(179, 60, 0, 0.5);
+    background:  rgba(179, 60, 0, 0.8);
     border-radius: 10px;
     box-shadow: 0 0 6px 3px #454547;
     justify-content: center;
@@ -101,7 +101,7 @@ li.head_li a i{
     width: 550px;
     height: 450px;
     margin: 0 0 0 60px;
-    background: rgba(179, 60, 0, 0.5);
+    background: rgba(179, 60, 0, 0.8);
     border-radius: 10px;
     box-shadow: 0 0 6px 3px #454547;
     display:inline-block
@@ -111,7 +111,7 @@ li.head_li a i{
     width: 550px;
     height: 450px;
     margin: 0 0 0 90px;
-    background: rgba(179, 60, 0, 0.5);
+    background: rgba(179, 60, 0, 0.8);
     border-radius: 10px;
     box-shadow: 0 0 6px 3px #454547;
     display:inline-block;
