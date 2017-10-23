@@ -4056,7 +4056,7 @@ let arr4 = [];
 let cross = [1, -1, 10, -10];
 let lineX = [1, -1];
 let lineY = [10, -10];
-
+let attack = true;
 
 let game = false;
 start.onclick = function(){
@@ -4083,7 +4083,7 @@ for(let i = 0; i < td_pc.length; i++){
             if(td_pc[i].value === 6 || td_pc[i].value === 7 || td_pc[i].value === 8 || td_pc[i].value === 9 || td_pc[i].value === 10){
                 alert('Выстрел уже произведен');
             }
-            else if(td_pc[i].value === 1){
+            else if(td_pc[i].value === 1 && attack){
                 td_pc[i].value = 7;
                 shotShipColor(i);
                 console.log(td_pc[i]);
@@ -4126,7 +4126,7 @@ for(let i = 0; i < td_pc.length; i++){
 
                 youWin(shotShipYou);
             }
-            else if(td_pc[i].value === 2){
+            else if(td_pc[i].value === 2 && attack){
                 td_pc[i].value = 8;
                 shotShipColor(i);
                 console.log(td_pc[i]);
@@ -4314,7 +4314,7 @@ for(let i = 0; i < td_pc.length; i++){
                 shotShipYou++;
                 youWin(shotShipYou);
             }
-            else if(td_pc[i].value === 3){
+            else if(td_pc[i].value === 3 && attack){
                 td_pc[i].value = 9;
                 shotShipColor(i);
                 console.log(td_pc[i]);
@@ -4437,7 +4437,7 @@ for(let i = 0; i < td_pc.length; i++){
                 shotShipYou++;
                 youWin(shotShipYou);
             }
-            else if(td_pc[i].value === 4){
+            else if(td_pc[i].value === 4 && attack){
                 td_pc[i].value = 10;
                 shotShipColor(i);
                 console.log(td_pc[i]);
@@ -4924,9 +4924,10 @@ for(let i = 0; i < td_pc.length; i++){
                 shotShipYou++;
                 youWin(shotShipYou);
             }
-            else if(td_pc[i].value === 5 || td_pc[i].value === 0){
+            else if((td_pc[i].value === 5 || td_pc[i].value === 0) && attack){
                 td_pc[i].value = 6;
                 shotColor(i);
+                attack = false;
 
                 let shotPC = function(){
                     let randShot;
@@ -5626,6 +5627,8 @@ for(let i = 0; i < td_pc.length; i++){
                         td_you[randShot].value = 6;
 
                         shotColorPC(randShot);
+
+                        attack = true;
                     }
                 };
 
